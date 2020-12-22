@@ -5,7 +5,7 @@ Thumbs.db
 npm-debug.log
 node_modules
 
-/dist
+
 /next.js
 
 .vscode
