@@ -16,7 +16,7 @@ export default class Badge extends Component {
   render(): React.DOM {
     const { children, value, max, isDot } = this.props;
     const className = this.classNames({
-      'el-badge__content': true,
+      'r-el-badge__content': true,
       'is-fixed': !!children,
       'is-dot': !!isDot,
     });
@@ -33,7 +33,7 @@ export default class Badge extends Component {
     }
 
     return (
-      <div style={this.style()} className={this.className('el-badge')}>
+      <div style={this.style()} className={this.className('r-el-badge')}>
         { children }
         <sup className={ className }>{ content }</sup>
       </div>

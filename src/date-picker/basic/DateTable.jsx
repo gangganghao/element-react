@@ -355,7 +355,7 @@ export default class DateTable extends Component {
         cellPadding="0"
         onClick={this.handleClick.bind(this)}
         onMouseMove={this.handleMouseMove.bind(this)}
-        className={this.classNames('el-date-table', { 'is-week-mode': selectionMode === 'week' })}>
+        className={this.classNames('r-el-date-table', { 'is-week-mode': selectionMode === 'week' })}>
         <tbody>
 
         <tr>
@@ -370,7 +370,7 @@ export default class DateTable extends Component {
             return (
               <tr
                 key={idx}
-                className={this.classNames('el-date-table__row', { 'current': row.isWeekActive })}>
+                className={this.classNames('r-el-date-table__row', { 'current': row.isWeekActive })}>
                 {
                   row.map((cell, idx) => (
                     <td className={this.getCellClasses(cell)} key={idx}>

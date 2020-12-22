@@ -22,8 +22,8 @@ export default class Col extends Component {
       if (this.props[prop] >= 0) {
         classList.push(
           prop !== 'span'
-          ? `el-col-${prop}-${this.props[prop]}`
-          : `el-col-${this.props[prop]}`
+          ? `r-el-col-${prop}-${this.props[prop]}`
+          : `r-el-col-${this.props[prop]}`
         );
       }
     });
@@ -34,17 +34,17 @@ export default class Col extends Component {
         Object.keys(props).forEach(prop => {
           classList.push(
             prop !== 'span'
-            ? `el-col-${size}-${prop}-${props[prop]}`
-            : `el-col-${size}-${props[prop]}`
+            ? `r-el-col-${size}-${prop}-${props[prop]}`
+            : `r-el-col-${size}-${props[prop]}`
           );
         });
       } else if (this.props[size] >= 0) {
-        classList.push(`el-col-${size}-${Number(this.props[size])}`);
+        classList.push(`r-el-col-${size}-${Number(this.props[size])}`);
       }
     });
 
     return React.createElement(this.props.tag, {
-      className: this.className('el-col', classList),
+      className: this.className('r-el-col', classList),
       style: this.style(this.getStyle())
     }, this.props.children);
   }

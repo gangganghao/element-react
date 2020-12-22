@@ -67,11 +67,11 @@ export default class Suggestions extends Component {
     const { showPopper, dropdownWidth } = this.state;
 
     return (
-      <Transition name="el-zoom-in-top" onEnter={this.onEnter.bind(this)} onAfterLeave={this.onAfterLeave.bind(this)}>
+      <Transition name="r-el-zoom-in-top" onEnter={this.onEnter.bind(this)} onAfterLeave={this.onAfterLeave.bind(this)}>
         <View show={showPopper}>
           <div
             ref="popper"
-            className={this.classNames('el-autocomplete-suggestion', 'el-popper', {
+            className={this.classNames('r-el-autocomplete-suggestion', 'r-el-popper', {
               'is-loading': loading
             })}
             style={{
@@ -81,12 +81,12 @@ export default class Suggestions extends Component {
           >
             <Scrollbar
               viewComponent="ul"
-              wrapClass="el-autocomplete-suggestion__wrap"
-              viewClass="el-autocomplete-suggestion__list"
+              wrapClass="r-el-autocomplete-suggestion__wrap"
+              viewClass="r-el-autocomplete-suggestion__list"
             >
               {
                 loading ? (
-                  <li><i className="el-icon-loading"></i></li>
+                  <li><i className="r-el-icon-loading"></i></li>
                 ) : suggestions.map((item, index) => {
                   return (
                     <li

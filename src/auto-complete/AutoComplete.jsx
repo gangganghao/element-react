@@ -143,8 +143,8 @@ class AutoComplete extends Component {
     }
     const reference = ReactDOM.findDOMNode(this.suggestionsNode);
     if (reference instanceof HTMLElement) {
-      const suggestion = document.querySelector('.el-autocomplete-suggestion__wrap');
-      const suggestionList = document.querySelectorAll('.el-autocomplete-suggestion__list li');
+      const suggestion = document.querySelector('.r-el-autocomplete-suggestion__wrap');
+      const suggestionList = document.querySelectorAll('.r-el-autocomplete-suggestion__list li');
       if (suggestion instanceof HTMLElement && suggestionList instanceof NodeList) {
         let highlightItem = suggestionList[index];
         let scrollTop = suggestion.scrollTop;
@@ -195,7 +195,7 @@ class AutoComplete extends Component {
     const { inputValue, suggestions } = this.state;
 
     return (
-      <div style={this.style()} className={this.className('el-autocomplete')}>
+      <div style={this.style()} className={this.className('r-el-autocomplete')}>
         <Input
           ref={node => this.inputNode = node}
           value={inputValue}

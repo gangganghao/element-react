@@ -54,7 +54,7 @@ export default class MessageBox extends Component {
   }
 
   typeClass(): string {
-    return this.props.type && typeMap[this.props.type] && `el-icon-${typeMap[this.props.type]}`;
+    return this.props.type && typeMap[this.props.type] && `r-el-icon-${typeMap[this.props.type]}`;
   }
 
   validate(value: string): boolean {
@@ -135,17 +135,17 @@ export default class MessageBox extends Component {
             }}
           >
             <View show={visible}>
-              <div className={this.classNames('el-message-box__wrapper', customClass)}>
-                <div className="el-message-box">
+              <div className={this.classNames('r-el-message-box__wrapper', customClass)}>
+                <div className="r-el-message-box">
                   {
                     title && (
-                      <div className="el-message-box__header">
-                        <div className="el-message-box__title">{title}</div>
+                      <div className="r-el-message-box__header">
+                        <div className="r-el-message-box__title">{title}</div>
                         {
                           showClose && (
-                            <button type="button" className="el-message-box__headerbtn" aria-label="Close"
+                            <button type="button" className="r-el-message-box__headerbtn" aria-label="Close"
                                     onClick={this.handleAction.bind(this, 'cancel')}>
-                              <i className="el-message-box__close el-icon-close" />
+                              <i className="r-el-message-box__close r-el-icon-close" />
                             </button>
                           )
                         }
@@ -154,14 +154,14 @@ export default class MessageBox extends Component {
                   }
                   {
                     message && (
-                      <div className="el-message-box__content">
-                        <div className={this.classNames('el-message-box__status', this.typeClass())} />
-                        <div className="el-message-box__message"
+                      <div className="r-el-message-box__content">
+                        <div className={this.classNames('r-el-message-box__status', this.typeClass())} />
+                        <div className="r-el-message-box__message"
                              style={{ marginLeft: this.typeClass() ? '50px' : '0' }}>
                           <div>{message}</div>
                         </div>
                         <View show={showInput}>
-                          <div className="el-message-box__input">
+                          <div className="r-el-message-box__input">
                             <Input
                               className={this.classNames({
                                 'invalid': editorErrorMessage
@@ -171,7 +171,7 @@ export default class MessageBox extends Component {
                               placeholder={inputPlaceholder}
                               onChange={this.onChange.bind(this)}
                             />
-                            <div className="el-message-box__errormsg" style={{
+                            <div className="r-el-message-box__errormsg" style={{
                               visibility: editorErrorMessage ? 'visible' : 'hidden'
                             }}>{editorErrorMessage}</div>
                           </div>
@@ -179,13 +179,13 @@ export default class MessageBox extends Component {
                       </div>
                     )
                   }
-                  <div className="el-message-box__btns">
+                  <div className="r-el-message-box__btns">
                     <View show={showCancelButton}>
                       <Button className={cancelButtonClass}
                               onClick={this.handleAction.bind(this, 'cancel')}>{this.cancelButtonText()}</Button>
                     </View>
                     <View show={showConfirmButton}>
-                      <Button className={this.classNames('el-button--primary', confirmButtonClass)}
+                      <Button className={this.classNames('r-el-button--primary', confirmButtonClass)}
                               onClick={this.handleAction.bind(this, 'confirm')}>{this.confirmButtonText()}</Button>
                     </View>
                   </div>

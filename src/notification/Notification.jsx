@@ -55,7 +55,7 @@ export default class Notification extends Component {
 
   typeClass(): string {
     const { type } = this.props
-    return type && typeMap[type] ? `el-icon-${ typeMap[type] }` : '';
+    return type && typeMap[type] ? `r-el-icon-${ typeMap[type] }` : '';
   }
 
   render() {
@@ -65,8 +65,8 @@ export default class Notification extends Component {
       <Transition
         unmountOnExit
         transitionClass={{
-          exiting: 'el-notification-fade-leave-active',
-          exited: 'el-notification-fade-enter'
+          exiting: 'r-el-notification-fade-leave-active',
+          exited: 'r-el-notification-fade-enter'
         }}
         in={visible}
         onEnter={() => {
@@ -78,7 +78,7 @@ export default class Notification extends Component {
         <View show={visible}>
           <div
             ref={(ele) => { this.rootDOM = ele; }}
-            className="el-notification"
+            className="r-el-notification"
             style={{
               top,
               zIndex: 9999
@@ -89,19 +89,19 @@ export default class Notification extends Component {
           >
             {
               type && (
-                <i className={this.classNames('el-notification__icon', this.typeClass(), iconClass)} />
+                <i className={this.classNames('r-el-notification__icon', this.typeClass(), iconClass)} />
               )
             }
             <div
               className={
-                this.classNames('el-notification__group', {
+                this.classNames('r-el-notification__group', {
                   'is-with-icon': this.typeClass() || iconClass
                 })
               }
             >
-              <h2 className="el-notification__title">{title}</h2>
-              <div className="el-notification__content">{message}</div>
-              <div className="el-notification__closeBtn el-icon-close" onClick={this.onClose.bind(this)} />
+              <h2 className="r-el-notification__title">{title}</h2>
+              <div className="r-el-notification__content">{message}</div>
+              <div className="r-el-notification__closeBtn r-el-icon-close" onClick={this.onClose.bind(this)} />
             </div>
           </div>
         </View>

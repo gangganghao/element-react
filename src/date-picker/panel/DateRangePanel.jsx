@@ -306,22 +306,22 @@ export default class DateRangePanel extends PopperBase {
     return (
       <div
         ref="root"
-        className={this.classNames('el-picker-panel el-date-range-picker', {
+        className={this.classNames('r-el-picker-panel r-el-date-range-picker', {
           'has-sidebar': shortcuts,
           'has-time': isShowTime
         })}
       >
-        <div className="el-picker-panel__body-wrapper">
+        <div className="r-el-picker-panel__body-wrapper">
           {
             Array.isArray(shortcuts) && (
-              <div className="el-picker-panel__sidebar">
+              <div className="r-el-picker-panel__sidebar">
                 {
                   shortcuts.map((e, idx) => {
                     return (
                       <button
                         key={idx}
                         type="button"
-                        className="el-picker-panel__shortcut"
+                        className="r-el-picker-panel__shortcut"
                         onClick={() => this.handleShortcutClick(e)}>{e.text}</button>
                     )
                   })
@@ -329,28 +329,28 @@ export default class DateRangePanel extends PopperBase {
               </div>
             )
           }
-          <div className="el-picker-panel__body">
+          <div className="r-el-picker-panel__body">
             {
               isShowTime && (
-                <div className="el-date-range-picker__time-header">
-                  <span className="el-date-range-picker__editors-wrap">
-                    <span className="el-date-range-picker__time-picker-wrap">
+                <div className="r-el-date-range-picker__time-header">
+                  <span className="r-el-date-range-picker__editors-wrap">
+                    <span className="r-el-date-range-picker__time-picker-wrap">
                       <Input
                         size="small"
                         ref="minInput"
                         placeholder={Locale.t('el.datepicker.startDate')}
-                        className="el-date-range-picker__editor"
+                        className="r-el-date-range-picker__editor"
                         value={this.minVisibleDate}
                         onChange={value => this.handleDateChange(value, 'min')}
 
                       />
                     </span>
-                    <span className="el-date-range-picker__time-picker-wrap">
+                    <span className="r-el-date-range-picker__time-picker-wrap">
                       <Input
                         size="small"
                         ref="timeIptStart"
                         placeholder={Locale.t('el.datepicker.startTime')}
-                        className="el-date-range-picker__editor"
+                        className="r-el-date-range-picker__editor"
                         value={this.minVisibleTime}
                         onFocus={()=>{
                           this.setState({
@@ -380,24 +380,24 @@ export default class DateRangePanel extends PopperBase {
                       }
                     </span>
                   </span>
-                  <span className="el-icon-arrow-right"></span>
-                  <span className="el-date-range-picker__editors-wrap is-right">
-                    <span className="el-date-range-picker__time-picker-wrap">
+                  <span className="r-el-icon-arrow-right"></span>
+                  <span className="r-el-date-range-picker__editors-wrap is-right">
+                    <span className="r-el-date-range-picker__time-picker-wrap">
                       <Input
                         size="small"
                         placeholder={Locale.t('el.datepicker.endDate')}
-                        className="el-date-range-picker__editor"
+                        className="r-el-date-range-picker__editor"
                         value={this.maxVisibleDate}
                         readOnly={!minDate}
                         onChange={value => this.handleDateInput(value, 'max')}
                       />
                     </span>
-                    <span className="el-date-range-picker__time-picker-wrap">
+                    <span className="r-el-date-range-picker__time-picker-wrap">
                       <Input
                         size="small"
                         ref="maxInput"
                         placeholder={Locale.t('el.datepicker.endTime')}
-                        className="el-date-range-picker__editor"
+                        className="r-el-date-range-picker__editor"
                         value={this.maxVisibleTime}
                         onFocus={() => {
                           if (minDate) {
@@ -433,16 +433,16 @@ export default class DateRangePanel extends PopperBase {
                 </div>
               )
             }
-            <div className="el-picker-panel__content el-date-range-picker__content is-left">
-              <div className="el-date-range-picker__header">
+            <div className="r-el-picker-panel__content r-el-date-range-picker__content is-left">
+              <div className="r-el-date-range-picker__header">
                 <button
                   type="button"
                   onClick={this.prevYear.bind(this)}
-                  className="el-picker-panel__icon-btn el-icon-d-arrow-left"></button>
+                  className="r-el-picker-panel__icon-btn r-el-icon-d-arrow-left"></button>
                 <button
                   type="button"
                   onClick={this.prevMonth.bind(this)}
-                  className="el-picker-panel__icon-btn el-icon-arrow-left"></button>
+                  className="r-el-picker-panel__icon-btn r-el-icon-arrow-left"></button>
                 <div>{leftLabel}</div>
               </div>
               <DateTable
@@ -458,16 +458,16 @@ export default class DateRangePanel extends PopperBase {
                 firstDayOfWeek={firstDayOfWeek}
               />
             </div>
-            <div className="el-picker-panel__content el-date-range-picker__content is-right">
-              <div className="el-date-range-picker__header">
+            <div className="r-el-picker-panel__content r-el-date-range-picker__content is-right">
+              <div className="r-el-date-range-picker__header">
                 <button
                   type="button"
                   onClick={this.nextYear.bind(this)}
-                  className="el-picker-panel__icon-btn el-icon-d-arrow-right"></button>
+                  className="r-el-picker-panel__icon-btn r-el-icon-d-arrow-right"></button>
                 <button
                   type="button"
                   onClick={this.nextMonth.bind(this)}
-                  className="el-picker-panel__icon-btn el-icon-arrow-right"></button>
+                  className="r-el-picker-panel__icon-btn r-el-icon-arrow-right"></button>
                 <div>{rightLabel}</div>
               </div>
               <DateTable
@@ -487,13 +487,13 @@ export default class DateRangePanel extends PopperBase {
         </div>
         {
           isShowTime && (
-            <div className="el-picker-panel__footer">
+            <div className="r-el-picker-panel__footer">
               <a
-                className="el-picker-panel__link-btn"
+                className="r-el-picker-panel__link-btn"
                 onClick={()=> this.handleClear()}>{ Locale.t('el.datepicker.clear') }</a>
               <button
                 type="button"
-                className="el-picker-panel__btn"
+                className="r-el-picker-panel__btn"
                 onClick={()=> this.handleConfirm()}
                 disabled={this.btnDisabled}>{ Locale.t('el.datepicker.confirm') }</button>
             </div>

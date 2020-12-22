@@ -9,14 +9,14 @@ describe('Card test', () => {
     const w = shallow(
       <Card header="HEADER" />
     );
-    expect(w.find('.el-card__header').at(0).text()).toBe('HEADER');
+    expect(w.find('.r-el-card__header').at(0).text()).toBe('HEADER');
   });
 
   it('render body', () => {
     const w = shallow(
       <Card>BODY</Card>
     );
-    expect(w.find('.el-card__body').at(0).text()).toBe('BODY');
+    expect(w.find('.r-el-card__body').at(0).text()).toBe('BODY');
   });
 
   it('use bodyStyle', () => {
@@ -27,6 +27,6 @@ describe('Card test', () => {
     const w = shallow(
       <Card bodyStyle={bodyStyle} />
     );
-    expect(w.find('.el-card__body').at(0).prop('style')).toEqual(bodyStyle);
+    expect(w.find('.r-el-card__body').at(0).prop('style')).toEqual(bodyStyle);
   });
 });

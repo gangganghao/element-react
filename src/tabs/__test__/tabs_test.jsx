@@ -17,22 +17,22 @@ test('Basic usage', () => {
     </Tabs>
   )
 
-  expect(tabs.find('.el-tabs .el-tabs__item').at(0).text()).toEqual('用户管理');
-  expect(tabs.find('.el-tabs .el-tab-pane').at(0).text()).toEqual('用户管理');
-  expect(tabs.find('.el-tabs .el-tabs__item').at(1).text()).toEqual('配置管理');
-  expect(tabs.find('.el-tabs .el-tab-pane').at(1).text()).toEqual('配置管理');
-  expect(tabs.find('.el-tabs .el-tabs__item').at(2).text()).toEqual('角色管理');
-  expect(tabs.find('.el-tabs .el-tab-pane').at(2).text()).toEqual('角色管理');
-  expect(tabs.find('.el-tabs .el-tabs__item').at(3).text()).toEqual('定时补偿任务');
-  expect(tabs.find('.el-tabs .el-tab-pane').at(3).text()).toEqual('定时补偿任务');
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(0).text()).toEqual('用户管理');
+  expect(tabs.find('.r-el-tabs .r-el-tab-pane').at(0).text()).toEqual('用户管理');
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(1).text()).toEqual('配置管理');
+  expect(tabs.find('.r-el-tabs .r-el-tab-pane').at(1).text()).toEqual('配置管理');
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(2).text()).toEqual('角色管理');
+  expect(tabs.find('.r-el-tabs .r-el-tab-pane').at(2).text()).toEqual('角色管理');
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(3).text()).toEqual('定时补偿任务');
+  expect(tabs.find('.r-el-tabs .r-el-tab-pane').at(3).text()).toEqual('定时补偿任务');
 
   tabs.mount();
-  expect(tabs.find('.el-tabs .el-tabs__item').at(1).hasClass('is-active')).toBeTruthy();
-  expect(tabs.find('.el-tabs .el-tab-pane').at(1).prop('style').display).toEqual(undefined);
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(1).hasClass('is-active')).toBeTruthy();
+  expect(tabs.find('.r-el-tabs .r-el-tab-pane').at(1).prop('style').display).toEqual(undefined);
 
-  tabs.find('.el-tabs .el-tabs__item').at(0).simulate('click');
-  expect(tabs.find('.el-tabs .el-tabs__item').at(0).hasClass('is-active')).toBeTruthy();
-  expect(tabs.find('.el-tabs .el-tabs__item').at(1).hasClass('is-active')).toBeFalsy();
+  tabs.find('.r-el-tabs .r-el-tabs__item').at(0).simulate('click');
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(0).hasClass('is-active')).toBeTruthy();
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(1).hasClass('is-active')).toBeFalsy();
   expect(state.name).toBe('1');
 });
 
@@ -46,7 +46,7 @@ test('Card Style', () => {
     </Tabs>
   )
 
-  expect(tabs.find('.el-tabs').hasClass('el-tabs--card')).toBeTruthy();
+  expect(tabs.find('.r-el-tabs').hasClass('r-el-tabs--card')).toBeTruthy();
 });
 
 test('Border card', () => {
@@ -59,7 +59,7 @@ test('Border card', () => {
     </Tabs>
   )
 
-  expect(tabs.find('.el-tabs').hasClass('el-tabs--border-card')).toBeTruthy();
+  expect(tabs.find('.r-el-tabs').hasClass('r-el-tabs--border-card')).toBeTruthy();
 });
 
 test('Custom Tab', () => {
@@ -73,7 +73,7 @@ test('Custom Tab', () => {
     </Tabs>
   )
 
-  expect(tabs.find('.el-tabs .el-tabs__header i').html()).toEqual('<i class="el-icon-date"></i>');
+  expect(tabs.find('.r-el-tabs .r-el-tabs__header i').html()).toEqual('<i class="r-el-icon-date"></i>');
 });
 
 test('Add & Close tab', () => {
@@ -122,24 +122,24 @@ test('Add & Close tab', () => {
     </Tabs>
   );
 
-  expect(tabs.find('.el-tabs__new-tab').length).toBe(1);
-  expect(tabs.find('.el-tabs .el-tabs__item').at(0).hasClass('is-closable')).toBeTruthy();
+  expect(tabs.find('.r-el-tabs__new-tab').length).toBe(1);
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').at(0).hasClass('is-closable')).toBeTruthy();
 
-  tabs.find('.el-tabs__new-tab').simulate('click');
+  tabs.find('.r-el-tabs__new-tab').simulate('click');
   tabs.setProps({
     children: state.tabs.map((item, index) => {
       return <Tabs.Pane key={index} closable label={item.title} name={item.name}>{item.content}</Tabs.Pane>
     }),
   });
-  expect(tabs.find('.el-tabs .el-tabs__item').length).toBe(3);
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').length).toBe(3);
 
-  tabs.find('.el-tabs .el-tabs__item').at(1).find('.el-icon-close').simulate('click');
+  tabs.find('.r-el-tabs .r-el-tabs__item').at(1).find('.r-el-icon-close').simulate('click');
   tabs.setProps({
     children: state.tabs.map((item, index) => {
       return <Tabs.Pane key={index} closable label={item.title} name={item.name}>{item.content}</Tabs.Pane>
     }),
   });
-  expect(tabs.find('.el-tabs .el-tabs__item').length).toBe(2);
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').length).toBe(2);
 });
 
 test('Customized trigger button of new tab', () => {
@@ -196,13 +196,13 @@ test('Customized trigger button of new tab', () => {
       return <Tabs.Pane key={index} closable label={item.title} name={item.name}>{item.content}</Tabs.Pane>
     }),
   });
-  expect(tabs.find('.el-tabs .el-tabs__item').length).toBe(3);
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').length).toBe(3);
 
-  tabs.find('.el-tabs .el-tabs__item').at(1).find('.el-icon-close').simulate('click');
+  tabs.find('.r-el-tabs .r-el-tabs__item').at(1).find('.r-el-icon-close').simulate('click');
   tabs.setProps({
     children: state.tabs.map((item, index) => {
       return <Tabs.Pane key={index} closable label={item.title} name={item.name}>{item.content}</Tabs.Pane>
     }),
   });
-  expect(tabs.find('.el-tabs .el-tabs__item').length).toBe(2);
+  expect(tabs.find('.r-el-tabs .r-el-tabs__item').length).toBe(2);
 });

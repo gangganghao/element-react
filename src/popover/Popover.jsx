@@ -125,8 +125,8 @@ export default class Popover extends Component {
       <span>
         <Transition name={transition} onEnter={this.onEnter.bind(this)} onAfterLeave={this.onAfterLeave.bind(this)}>
           <View show={this.state.showPopper}>
-            <div ref="popper" className={this.className('el-popover', popperClass)} style={this.style({ width: Number(width) })}>
-              { title && <div className="el-popover__title">{title}</div> }
+            <div ref="popper" className={this.className('r-el-popover', popperClass)} style={this.style({ width: Number(width) })}>
+              { title && <div className="r-el-popover__title">{title}</div> }
               { content }
               { visibleArrow && <div ref="arrow" className="popper__arrow"/>}
             </div>

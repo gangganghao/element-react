@@ -101,18 +101,18 @@ export default class HueSlider extends Component {
       <div
         ref={el => this.$el = el}
         className={this.classNames({
-          'el-color-hue-slider': true,
+          'r-el-color-hue-slider': true,
           'is-vertical': vertical
         })}
         style={{ float: 'right' }}
       >
         <div
-          className="el-color-hue-slider__bar"
+          className="r-el-color-hue-slider__bar"
           onClick={e => this.handleClick(e)}
           ref="bar"
         />
         <div
-          className="el-color-hue-slider__thumb"
+          className="r-el-color-hue-slider__thumb"
           style={{
             left: thumbLeft + 'px',
             top: thumbTop + 'px'

@@ -16,7 +16,7 @@ export default class Breadcrumb extends Component {
 
   render() {
     return (
-      <div style={this.style()} className={this.className('el-breadcrumb')}>
+      <div style={this.style()} className={this.className('r-el-breadcrumb')}>
         {this.props.children}
       </div>
     )

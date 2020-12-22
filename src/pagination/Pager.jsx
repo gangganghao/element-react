@@ -24,8 +24,8 @@ export default class Pager extends Component {
       internalCurrentPage: 1,
       internalPageSize: 0,
 
-      quickprevIconClass: 'el-icon-more',
-      quicknextIconClass: 'el-icon-more',
+      quickprevIconClass: 'r-el-icon-more',
+      quicknextIconClass: 'r-el-icon-more',
       showPrevMore: false,
       showNextMore: false
     };
@@ -107,10 +107,10 @@ export default class Pager extends Component {
     this.state.showNextMore = showNextMore;
     this.state.quickprevIconClass = showPrevMore
       ? this.state.quickprevIconClass
-      : 'el-icon-more';
+      : 'r-el-icon-more';
     this.state.quicknextIconClass = showNextMore
       ? this.state.quicknextIconClass
-      : 'el-icon-more';
+      : 'r-el-icon-more';
 
     return array;
   }
@@ -121,7 +121,7 @@ export default class Pager extends Component {
     const { quickprevIconClass, quicknextIconClass } = this.state;
 
     return (
-      <ul onClick={this.onPagerClick.bind(this)} className="el-pager">
+      <ul onClick={this.onPagerClick.bind(this)} className="r-el-pager">
         {pageCount > 0 &&
           <li
             className={this.classNames('number', { active: currentPage === 1 })}
@@ -132,14 +132,14 @@ export default class Pager extends Component {
         {this.state.showPrevMore &&
           <li
             className={this.classNames(
-              'el-icon more btn-quickprev',
+              'r-el-icon more btn-quickprev',
               quickprevIconClass
             )}
             onMouseEnter={() => {
-              this.setState({ quickprevIconClass: 'el-icon-d-arrow-left' });
+              this.setState({ quickprevIconClass: 'r-el-icon-d-arrow-left' });
             }}
             onMouseLeave={() => {
-              this.setState({ quickprevIconClass: 'el-icon-more' });
+              this.setState({ quickprevIconClass: 'r-el-icon-more' });
             }}
           />}
 
@@ -159,14 +159,14 @@ export default class Pager extends Component {
         {this.state.showNextMore &&
           <li
             className={this.classNames(
-              'el-icon more btn-quicknext',
+              'r-el-icon more btn-quicknext',
               quicknextIconClass
             )}
             onMouseEnter={() => {
-              this.setState({ quicknextIconClass: 'el-icon-d-arrow-right' });
+              this.setState({ quicknextIconClass: 'r-el-icon-d-arrow-right' });
             }}
             onMouseLeave={() => {
-              this.setState({ quicknextIconClass: 'el-icon-more' });
+              this.setState({ quicknextIconClass: 'r-el-icon-more' });
             }}
           />}
 

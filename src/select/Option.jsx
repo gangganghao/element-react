@@ -103,7 +103,7 @@ export default class Option extends Component {
       <View show={visible}>
         <li
           style={this.style()}
-          className={this.className('el-select-dropdown__item', {
+          className={this.className('r-el-select-dropdown__item', {
             'selected': this.itemSelected(),
             'is-disabled': this.props.disabled || this.parent().props.disabled,
             'hover': this.parent().state.hoverIndex === index

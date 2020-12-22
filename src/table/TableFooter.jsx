@@ -47,7 +47,7 @@ export default class TableFooter extends Component<TableFooterProps> {
 
     return (
       <table
-        className="el-table__footer"
+        className="r-el-table__footer"
         cellSpacing="0"
         cellPadding="0"
         style={this.style({

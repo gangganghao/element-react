@@ -16,14 +16,14 @@ test('Basic usage', () => {
   );
 
   // 模拟component1的第二个星 mouseenter事件
-  const rate1 = component1.find('.el-rate .el-rate__item').at(1);
+  const rate1 = component1.find('.r-el-rate .r-el-rate__item').at(1);
   rate1.simulate('mouseenter');
   setTimeout(() => {
     expect(rate1.find('i').at(0).hasClass('hover')).toEqual(true);
   }, 1000)
 
   // 模拟component1的第三个星 click事件
-  const rate2 = component1.find('.el-rate .el-rate__item').at(2);
+  const rate2 = component1.find('.r-el-rate .r-el-rate__item').at(2);
   rate2.simulate('click');
   setTimeout(() => {
     expect(rate2.find('i').at(0).prop('style').color).toBe('#F7BA2A');
@@ -36,7 +36,7 @@ test('Basic usage', () => {
   );
 
   // 模拟component2的第四个星 click事件
-  const rate3 = component2.find('.el-rate .el-rate__item').at(3);
+  const rate3 = component2.find('.r-el-rate .r-el-rate__item').at(3);
   rate3.simulate('click');
   setTimeout(() => {
     expect(rate3.find('i').at(0).prop('style').color).toEqual('#FF9900');
@@ -52,9 +52,9 @@ test('With text', () => {
   );
 
   // 模拟component2的第四个星 click事件
-  const rate = component.find('.el-rate .el-rate__item').at(3);
+  const rate = component.find('.r-el-rate .r-el-rate__item').at(3);
   rate.simulate('click');
-  expect(component.find('.el-rate__text').at(0).text()).toEqual('good');
+  expect(component.find('.r-el-rate__text').at(0).text()).toEqual('good');
 });
 
 test('Read-only', () => {
@@ -62,10 +62,10 @@ test('Read-only', () => {
     <Rate disabled={true} value={3.9} showText={true} />
   );
 
-  expect(component.find('.el-rate__text').at(0).text()).toEqual('3.9');
+  expect(component.find('.r-el-rate__text').at(0).text()).toEqual('3.9');
 
   // 模拟component的第五个星 click事件
-  const rate = component.find('.el-rate .el-rate__item').at(4);
+  const rate = component.find('.r-el-rate .r-el-rate__item').at(4);
   rate.simulate('click');
   expect(rate.find('i').at(0).prop('style').color).toEqual('#EFF2F7'); // 点击后颜色不变
 });

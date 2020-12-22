@@ -96,7 +96,7 @@ export class Scrollbar extends PureComponent {
     }
 
     const view = React.createElement(viewComponent, {
-      className: this.classNames('el-scrollbar__view', viewClass),
+      className: this.classNames('r-el-scrollbar__view', viewClass),
       style: viewStyle,
       ref: 'resize'
     }, children);
@@ -110,7 +110,7 @@ export class Scrollbar extends PureComponent {
           key={0}
           style={style}
           onScroll={this.handleScroll.bind(this)}
-          className={this.classNames(wrapClass, 'el-scrollbar__wrap', gutter ? '' : 'el-scrollbar__wrap--hidden-default')}
+          className={this.classNames(wrapClass, 'r-el-scrollbar__wrap', gutter ? '' : 'r-el-scrollbar__wrap--hidden-default')}
           >
           {view}
         </div>
@@ -127,7 +127,7 @@ export class Scrollbar extends PureComponent {
             {...others}
             key={0} 
             ref="wrap" 
-            className={this.classNames(wrapClass, 'el-scrollbar__wrap')} 
+            className={this.classNames(wrapClass, 'r-el-scrollbar__wrap')} 
             style={style}>
             {view}
           </div>
@@ -135,7 +135,7 @@ export class Scrollbar extends PureComponent {
       ]
     }
 
-    return React.createElement('div', {className: this.classNames('el-scrollbar', className)}, nodes)
+    return React.createElement('div', {className: this.classNames('r-el-scrollbar', className)}, nodes)
   }
 }
 

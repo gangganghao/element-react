@@ -37,7 +37,7 @@ export default class YearTable extends Component {
     const startYear = Math.floor(deconstructDate(date).year / 10) * 10;
 
     return (
-      <table onClick={this.handleYearTableClick.bind(this)} className="el-year-table">
+      <table onClick={this.handleYearTableClick.bind(this)} className="r-el-year-table">
         <tbody>
           <tr>
             <td className={this.classNames('available', this.getCellStyle(startYear + 0))}>

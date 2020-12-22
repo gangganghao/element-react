@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Notification from './Notification';
 
-const className = '.el-notification';
+const className = '.r-el-notification';
 
 export default function NotificationCenter(props = {}, type) {
   const div = document.createElement('div');

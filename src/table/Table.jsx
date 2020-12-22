@@ -26,7 +26,7 @@ export default class Table extends Component<TableProps, TableState> {
     super(props);
     this.state = {};
 
-    // this.tableId = `el-table_${tableIdSeed++}_`;
+    // this.tableId = `r-el-table_${tableIdSeed++}_`;
     // this.tableId = tableIdSeed++;
 
     ['syncScroll'].forEach((fn) => {
@@ -114,19 +114,19 @@ export default class Table extends Component<TableProps, TableState> {
           height: props.height,
           maxHeight: props.maxHeight,
         })}
-        className={this.className('el-table', {
-          'el-table--fit': props.fit,
-          'el-table--striped': props.stripe,
-          'el-table--border': props.border,
-          'el-table--hidden': isHidden,
-          'el-table--fluid-height': props.maxHeight,
-          'el-table--enable-row-hover': !tableStoreState.isComplex,
-          'el-table--enable-row-transition': (tableStoreState.data || []).length && (tableStoreState.data || []).length < 100
+        className={this.className('r-el-table', {
+          'r-el-table--fit': props.fit,
+          'r-el-table--striped': props.stripe,
+          'r-el-table--border': props.border,
+          'r-el-table--hidden': isHidden,
+          'r-el-table--fluid-height': props.maxHeight,
+          'r-el-table--enable-row-hover': !tableStoreState.isComplex,
+          'r-el-table--enable-row-transition': (tableStoreState.data || []).length && (tableStoreState.data || []).length < 100
         })}
         ref={this.bindRef('el')}
       >
         {props.showHeader && (
-          <div className="el-table__header-wrapper" ref={this.bindRef('headerWrapper')}>
+          <div className="r-el-table__header-wrapper" ref={this.bindRef('headerWrapper')}>
             <TableHeader
               {...this.props}
               style={{ width: this.bodyWidth || '' }}
@@ -135,7 +135,7 @@ export default class Table extends Component<TableProps, TableState> {
         )}
         <div
           style={this.bodyWrapperHeight}
-          className="el-table__body-wrapper"
+          className="r-el-table__body-wrapper"
           ref={this.bindRef('bodyWrapper')}
           onScroll={this.syncScroll}
         >
@@ -146,16 +146,16 @@ export default class Table extends Component<TableProps, TableState> {
           {(!props.data || !props.data.length) && (
             <div
               style={{ width: this.bodyWidth }}
-              className="el-table__empty-block"
+              className="r-el-table__empty-block"
             >
-              <span className="el-table__empty-text">{props.emptyText}</span>
+              <span className="r-el-table__empty-text">{props.emptyText}</span>
             </div>
           )}
         </div>
         {props.showSummary && (
           <div
             style={{ visibility: props.data && props.data.length ? 'visible' : 'hidden' }}
-            className="el-table__footer-wrapper"
+            className="r-el-table__footer-wrapper"
             ref={this.bindRef('footerWrapper')}
           >
             <TableFooter
@@ -169,11 +169,11 @@ export default class Table extends Component<TableProps, TableState> {
             style={Object.assign({}, this.fixedHeight, {
               width: layout.fixedWidth || ''
             })}
-            className="el-table__fixed"
+            className="r-el-table__fixed"
             ref={this.bindRef('fixedWrapper')}
           >
             {props.showHeader && (
-              <div className="el-table__fixed-header-wrapper" ref={this.bindRef('fixedHeaderWrapper')}>
+              <div className="r-el-table__fixed-header-wrapper" ref={this.bindRef('fixedHeaderWrapper')}>
                 <TableHeader
                   fixed="left"
                   {...this.props}
@@ -185,7 +185,7 @@ export default class Table extends Component<TableProps, TableState> {
               style={Object.assign({}, this.fixedBodyHeight, {
                 top: layout.headerHeight || 0
               })}
-              className="el-table__fixed-body-wrapper"
+              className="r-el-table__fixed-body-wrapper"
               ref={this.bindRef('fixedBodyWrapper')}
             >
               <TableBody
@@ -195,7 +195,7 @@ export default class Table extends Component<TableProps, TableState> {
               />
             </div>
             {props.showSummary && (
-              <div className="el-table__fixed-footer-wrapper" ref={this.bindRef('fixedFooterWrapper')}>
+              <div className="r-el-table__fixed-footer-wrapper" ref={this.bindRef('fixedFooterWrapper')}>
                 <TableFooter
                   fixed="left"
                   {...this.props}
@@ -207,7 +207,7 @@ export default class Table extends Component<TableProps, TableState> {
         )}
         {!!tableStoreState.rightFixedColumns.length && (
           <div
-            className="el-table__fixed-right"
+            className="r-el-table__fixed-right"
             ref={this.bindRef('rightFixedWrapper')}
             style={Object.assign({}, {
               width: layout.rightFixedWidth || '',
@@ -215,7 +215,7 @@ export default class Table extends Component<TableProps, TableState> {
             }, this.fixedHeight)}
           >
             {props.showHeader && (
-              <div className="el-table__fixed-header-wrapper" ref={this.bindRef('rightFixedHeaderWrapper')}>
+              <div className="r-el-table__fixed-header-wrapper" ref={this.bindRef('rightFixedHeaderWrapper')}>
                 <TableHeader
                   fixed="right"
                   {...this.props}
@@ -224,7 +224,7 @@ export default class Table extends Component<TableProps, TableState> {
               </div>
             )}
             <div
-              className="el-table__fixed-body-wrapper"
+              className="r-el-table__fixed-body-wrapper"
               ref={this.bindRef('rightFixedBodyWrapper')}
               style={Object.assign({}, {
                 top: layout.headerHeight
@@ -238,7 +238,7 @@ export default class Table extends Component<TableProps, TableState> {
             </div>
             {props.showSummary && (
               <div
-                className="el-table__fixed-footer-wrapper"
+                className="r-el-table__fixed-footer-wrapper"
                 ref={this.bindRef('rightFixedFooterWrapper')}
                 style={{ visibility: props.data && props.data.length ? 'visible' : 'hidden' }}
               >
@@ -253,11 +253,11 @@ export default class Table extends Component<TableProps, TableState> {
         )}
         {!!tableStoreState.rightFixedColumns.length && (
           <div
-            className="el-table__fixed-right-patch"
+            className="r-el-table__fixed-right-patch"
             style={{ width: layout.scrollY ? layout.gutterWidth : '0', height: layout.headerHeight }}
           />
         )}
-        <div className="el-table__column-resize-proxy" ref={this.bindRef('resizeProxy')} style={{ visibility: 'hidden' }} />
+        <div className="r-el-table__column-resize-proxy" ref={this.bindRef('resizeProxy')} style={{ visibility: 'hidden' }} />
       </div>
     )
   }

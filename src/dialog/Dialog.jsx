@@ -105,21 +105,21 @@ export default class Dialog extends Component {
             <div
               ref={this.wrap}
               style={{ zIndex: 1013 }}
-              className={this.classNames('el-dialog__wrapper')}
+              className={this.classNames('r-el-dialog__wrapper')}
               onClick={e => this.handleWrapperClick(e)}
               onKeyDown={e => this.onKeyDown(e)}
             >
               <div
                 ref="dialog"
                 style={this.style(size === 'full' ? {} : { 'top': top })}
-                className={this.className("el-dialog", `el-dialog--${ size }`, customClass)}
+                className={this.className("r-el-dialog", `r-el-dialog--${ size }`, customClass)}
               >
-                <div className="el-dialog__header">
-                  <span className="el-dialog__title">{title}</span>
+                <div className="r-el-dialog__header">
+                  <span className="r-el-dialog__title">{title}</span>
                   {
                     showClose && (
-                      <button type="button" className="el-dialog__headerbtn" onClick={e => this.close(e)}>
-                        <i className="el-dialog__close el-icon el-icon-close" />
+                      <button type="button" className="r-el-dialog__headerbtn" onClick={e => this.close(e)}>
+                        <i className="r-el-dialog__close r-el-icon r-el-icon-close" />
                       </button>
                     )
                   }

@@ -230,7 +230,7 @@ export default class TableHeader extends Component<TableHeaderProps> {
 
     return (
       <table
-        className="el-table__header"
+        className="r-el-table__header"
         cellPadding={0}
         cellSpacing={0}
         style={this.style({
@@ -299,10 +299,10 @@ export default class TableHeader extends Component<TableHeaderProps> {
                         toggleFilter={this.handleFilterClick.bind(this, column)}
                       >
                         <span
-                          className="el-table__column-filter-trigger"
+                          className="r-el-table__column-filter-trigger"
                           onClick={this.handleFilterClick.bind(this, column)}
                         >
-                          <i className={this.classNames('el-icon-arrow-down', { 'el-icon-arrow-up': column.filterOpened })} />
+                          <i className={this.classNames('r-el-icon-arrow-down', { 'r-el-icon-arrow-up': column.filterOpened })} />
                         </span>
                       </FilterPannel>
                     )}

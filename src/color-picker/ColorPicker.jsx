@@ -107,26 +107,26 @@ class ColorPicker extends Component {
       }
     }
     return (
-      <div className="el-color-picker">
+      <div className="r-el-color-picker">
         <div
-          className="el-color-picker__trigger"
+          className="r-el-color-picker__trigger"
           onClick={() => this.setState({ showPicker: !showPicker })}
         >
           <span
             className={this.classNames({
-              'el-color-picker__color': true,
+              'r-el-color-picker__color': true,
               'is-alpha': showAlpha
             })}
           >
             <span
-              className="el-color-picker__color-inner"
+              className="r-el-color-picker__color-inner"
               style={{ backgroundColor: displayedColor }}
             />
             {!value &&
               !showPanelColor &&
-              <span className="el-color-picker__empty el-icon-close" />}
+              <span className="r-el-color-picker__empty r-el-icon-close" />}
           </span>
-          <span className="el-color-picker__icon el-icon-caret-bottom" />
+          <span className="r-el-color-picker__icon r-el-icon-caret-bottom" />
         </div>
         <PickerDropdown
           ref="dropdown"

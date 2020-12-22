@@ -75,7 +75,7 @@ export default class Loading extends Component {
               bottom: 0,
               left: 0
             }}>
-            <div className={this.classNames('el-loading-spinner', {
+            <div className={this.classNames('r-el-loading-spinner', {
               'is-full-screen': fullscreen
             })} style={{
               position: 'absolute',
@@ -86,7 +86,7 @@ export default class Loading extends Component {
                 <circle className="path" cx="50" cy="50" r="20" fill="none" />
               </svg>
               {
-                text && <p className="el-loading-text">{text}</p>
+                text && <p className="r-el-loading-text">{text}</p>
               }
             </div>
           </div>

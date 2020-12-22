@@ -68,8 +68,8 @@ export default class Progress extends Component {
   iconClass(): string {
     const { type, status } = this.props;
     return type === 'line'
-      ? status === 'success' ? 'el-icon-circle-check' : 'el-icon-circle-cross'
-      : status === 'success' ? 'el-icon-check' : 'el-icon-close';
+      ? status === 'success' ? 'r-el-icon-circle-check' : 'r-el-icon-circle-cross'
+      : status === 'success' ? 'r-el-icon-check' : 'r-el-icon-close';
   }
 
   progressTextSize(): number {
@@ -90,18 +90,18 @@ export default class Progress extends Component {
     let progress;
     if (type === 'line') {
       progress = (
-        <div className="el-progress-bar">
+        <div className="r-el-progress-bar">
           <div
-            className="el-progress-bar__outer"
+            className="r-el-progress-bar__outer"
             style={{ height: `${strokeWidth}px` }}
           >
             <div
-              className="el-progress-bar__inner"
+              className="r-el-progress-bar__inner"
               style={{ width: `${percentage}%` }}
             >
               {showText &&
                 textInside &&
-                <div className="el-progress-bar__innerText">
+                <div className="r-el-progress-bar__innerText">
                   {`${percentage}%`}
                 </div>}
             </div>
@@ -111,19 +111,19 @@ export default class Progress extends Component {
     } else {
       progress = (
         <div
-          className="el-progress-circle"
+          className="r-el-progress-circle"
           style={{ height: `${width}px`, width: `${width}px` }}
         >
           <svg viewBox="0 0 100 100">
             <path
-              className="el-progress-circle__track"
+              className="r-el-progress-circle__track"
               d={this.trackPath()}
               stroke="#e5e9f2"
               strokeWidth={this.relativeStrokeWidth()}
               fill="none"
             />
             <path
-              className="el-progress-circle__path"
+              className="r-el-progress-circle__path"
               d={this.trackPath()}
               strokeLinecap="round"
               stroke={this.stroke()}
@@ -138,7 +138,7 @@ export default class Progress extends Component {
     const progressInfo = showText &&
       !textInside &&
       <div
-        className="el-progress__text"
+        className="r-el-progress__text"
         style={{ fontSize: `${this.progressTextSize()}px` }}
       >
         {status ? <i className={this.iconClass()} /> : `${percentage}%`}
@@ -147,10 +147,10 @@ export default class Progress extends Component {
     return (
       <div
         style={this.style()}
-        className={this.className('el-progress', `el-progress--${type}`, {
+        className={this.className('r-el-progress', `r-el-progress--${type}`, {
           [`is-${status}`]: !!status,
-          'el-progress--without-text': !showText,
-          'el-progress--text-inside': textInside
+          'r-el-progress--without-text': !showText,
+          'r-el-progress--text-inside': textInside
         })}
       >
         {progress}

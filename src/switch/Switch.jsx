@@ -105,18 +105,18 @@ export default class Switch extends Component {
     return (
       <label
         style={this.style()}
-        className={this.className('el-switch', {
+        className={this.className('r-el-switch', {
           'is-disabled' : disabled,
-          'el-switch--wide' : this.hasText(),
+          'r-el-switch--wide' : this.hasText(),
           'is-checked' : value === onValue
         })}>
 
         <View show={disabled}>
-          <div className="el-switch__mask"></div>
+          <div className="r-el-switch__mask"></div>
         </View>
 
         <input
-          className={this.className('el-switch__input', {
+          className={this.className('r-el-switch__input', {
             'allow-focus' : allowFocus
           })}
           type="checkbox"
@@ -129,14 +129,14 @@ export default class Switch extends Component {
           onBlur={this.handleBlur.bind(this)}
         />
 
-        <span className="el-switch__core" ref="core" style={{ 'width': coreWidth + 'px' }}>
-          <span className="el-switch__button" style={Object.assign({}, buttonStyle)} onClick={this.setFocus.bind(this)}/>
+        <span className="r-el-switch__core" ref="core" style={{ 'width': coreWidth + 'px' }}>
+          <span className="r-el-switch__button" style={Object.assign({}, buttonStyle)} onClick={this.setFocus.bind(this)}/>
         </span>
 
         <Transition name="label-fade">
           <View show={value === onValue}>
             <div
-              className="el-switch__label el-switch__label--left"
+              className="r-el-switch__label r-el-switch__label--left"
               style={{ 'width': coreWidth + 'px' }}
             >
               { onIconClass && <i className={onIconClass} /> }
@@ -148,7 +148,7 @@ export default class Switch extends Component {
         <Transition name="label-fade">
           <View show={value !== onValue}>
             <div
-              className="el-switch__label el-switch__label--right"
+              className="r-el-switch__label r-el-switch__label--right"
               style={{ 'width': coreWidth + 'px' }}
             >
               { offIconClass && <i className={offIconClass} /> }

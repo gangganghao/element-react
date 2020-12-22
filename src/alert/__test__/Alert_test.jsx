@@ -9,23 +9,23 @@ describe('Alert test', () => {
     const w = mount(
       <Alert title="TEST" type="success" />
     );
-    expect(w.find('div.el-alert--success')).toBeTruthy();
-    expect(w.find('span.el-alert__title').exists()).toBeTruthy();
-    expect(w.find('span.el-alert__title').text()).toBe('TEST');
+    expect(w.find('div.r-el-alert--success')).toBeTruthy();
+    expect(w.find('span.r-el-alert__title').exists()).toBeTruthy();
+    expect(w.find('span.r-el-alert__title').text()).toBe('TEST');
   });
 
   it('default closable', () => {
     const w = mount(
       <Alert title="TEST" closable={true}/>
     );
-    expect(w.find('i.el-alert__closebtn').prop('style')).toEqual({});
+    expect(w.find('i.r-el-alert__closebtn').prop('style')).toEqual({});
   })
 
   it('disable close', () => {
     const w = mount(
       <Alert title="TEST" closable={false}/>
     );
-    expect(w.find('i.el-alert__closebtn').prop('style').display).toBe('none');
+    expect(w.find('i.r-el-alert__closebtn').prop('style').display).toBe('none');
   });
 
   it('closeText', () => {
@@ -40,7 +40,7 @@ describe('Alert test', () => {
     const w = mount(
       <Alert title="TEST" onClose={onClose}/>
     );
-    w.find('i.el-alert__closebtn').simulate('click');
+    w.find('i.r-el-alert__closebtn').simulate('click');
     setTimeout(() => {
       expect(onClose.calledOnce).toBe(true);
     }, 1000)
@@ -50,7 +50,7 @@ describe('Alert test', () => {
     const w = mount(
       <Alert title="TEST" showIcon={true} />
     );
-    expect(w.find('i.el-alert__icon').exists()).toBeTruthy();
+    expect(w.find('i.r-el-alert__icon').exists()).toBeTruthy();
   });
 
   it('description', () => {
@@ -59,7 +59,7 @@ describe('Alert test', () => {
         title="TEST"
         description="testDescription" />
     );
-    expect(w.find('p.el-alert__description').text()).toBe('testDescription');
+    expect(w.find('p.r-el-alert__description').text()).toBe('testDescription');
   })
 
   it('showIcon and description', () => {
@@ -69,7 +69,7 @@ describe('Alert test', () => {
         showIcon={true}
         description="testDescription" />
     );
-    expect(w.find('i.el-alert__icon').exists()).toBeTruthy();
-    expect(w.find('p.el-alert__description').text()).toBe('testDescription');
+    expect(w.find('i.r-el-alert__icon').exists()).toBeTruthy();
+    expect(w.find('p.r-el-alert__description').text()).toBe('testDescription');
   });
 });

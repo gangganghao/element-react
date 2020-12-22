@@ -259,36 +259,36 @@ export default class Tabs extends Component {
     const { children, currentName, barStyle, navStyle, scrollable, scrollNext, scrollPrev } = this.state;
     const { type, addable, closable, editable } = this.props;
     const tabsCls = this.classNames({
-      'el-tabs': true,
-      'el-tabs--card': type === 'card',
-      'el-tabs--border-card': type === 'border-card',
+      'r-el-tabs': true,
+      'r-el-tabs--card': type === 'card',
+      'r-el-tabs--border-card': type === 'border-card',
     });
     const addButton = editable || addable
       ? (
         <span
-          className="el-tabs__new-tab"
+          className="r-el-tabs__new-tab"
           onClick={() => this.handleTabAdd()}
         >
-          <i className="el-icon-plus" />
+          <i className="r-el-icon-plus" />
         </span>
       )
       : null;
     const scrollBtn = scrollable
       ? [(
         <span
-          key="el-tabs__nav-prev"
-          className={scrollPrev ? 'el-tabs__nav-prev' : 'el-tabs__nav-prev is-disabled'}
+          key="r-el-tabs__nav-prev"
+          className={scrollPrev ? 'r-el-tabs__nav-prev' : 'r-el-tabs__nav-prev is-disabled'}
           onClick={() => this.scrollPrev()}
         >
-          <i className="el-icon-arrow-left" />
+          <i className="r-el-icon-arrow-left" />
         </span>
       ), (
         <span
-          key="el-tabs__nav-next"
-          className={scrollNext ? 'el-tabs__nav-next' : 'el-tabs__nav-next is-disabled'}
+          key="r-el-tabs__nav-next"
+          className={scrollNext ? 'r-el-tabs__nav-next' : 'r-el-tabs__nav-next is-disabled'}
           onClick={() => this.scrollNext()}
         >
-          <i className="el-icon-arrow-right" />
+          <i className="r-el-icon-arrow-right" />
         </span>
       )]
       : null;
@@ -296,17 +296,17 @@ export default class Tabs extends Component {
 
     return (
       <div style={this.style()} className={this.className(tabsCls)}>
-        <div className="el-tabs__header">
+        <div className="r-el-tabs__header">
           {addButton}
-          <div className={scrollable ? 'el-tabs__nav-wrap is-scrollable' : 'el-tabs__nav-wrap'}>
+          <div className={scrollable ? 'r-el-tabs__nav-wrap is-scrollable' : 'r-el-tabs__nav-wrap'}>
             {scrollBtn}
-            <div className="el-tabs__nav-scroll" ref="navScroll">
-              <div className="el-tabs__nav" ref="nav" style={navStyle}>
+            <div className="r-el-tabs__nav-scroll" ref="navScroll">
+              <div className="r-el-tabs__nav" ref="nav" style={navStyle}>
                 {
                   React.Children.map(children, (item, index) => {
                     const { name, label, disabled } = item.props;
                     const tabCls = this.classNames({
-                      'el-tabs__item': true,
+                      'r-el-tabs__item': true,
                       'is-active': name === currentName,
                       'is-disabled': disabled,
                       'is-closable': closable || item.props.closable,
@@ -314,26 +314,26 @@ export default class Tabs extends Component {
 
                     return (
                       <div
-                        key={`el-tabs__item-${index}`} ref={(tab) => tab && this.tabs.push(tab)}
+                        key={`r-el-tabs__item-${index}`} ref={(tab) => tab && this.tabs.push(tab)}
                         name={name}
                         className={tabCls} onClick={(e) => this.handleTabClick(item, e)}
                       >
                         {label}
                         <View show={editable || closable || item.props.closable}>
-                          <span className="el-icon-close" onClick={(e) => this.handleTabRemove(item, index, e)} />
+                          <span className="r-el-icon-close" onClick={(e) => this.handleTabRemove(item, index, e)} />
                         </View>
                       </div>
                     )
                   })
                 }
                 <View show={!type}>
-                  <div className="el-tabs__active-bar" style={barStyle} />
+                  <div className="r-el-tabs__active-bar" style={barStyle} />
                 </View>
               </div>
             </div>
           </div>
         </div>
-        <div className="el-tabs__content">
+        <div className="r-el-tabs__content">
           {
             React.Children.map(children, item => {
               const { name } = item.props;

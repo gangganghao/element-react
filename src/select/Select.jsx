@@ -16,7 +16,7 @@ import Input from '../input';
 import i18n from '../locale';
 
 StyleSheet.reset(`
-  .el-select-dropdown {
+  .r-el-select-dropdown {
     position: absolute !important;
   }
 `)
@@ -197,8 +197,8 @@ class Select extends Component {
     if (!visible) {
       this.reference.querySelector('input').blur();
 
-      if (this.refs.root.querySelector('.el-input__icon')) {
-        const elements = this.refs.root.querySelector('.el-input__icon');
+      if (this.refs.root.querySelector('.r-el-input__icon')) {
+        const elements = this.refs.root.querySelector('.r-el-input__icon');
 
         for (let i = 0; i < elements.length; i++) {
           elements[i].classList.remove('is-reverse');
@@ -228,10 +228,10 @@ class Select extends Component {
         this.setState({ bottomOverflowBeforeHidden, selectedLabel });
       }
     } else {
-      let icon = this.refs.root.querySelector('.el-input__icon');
+      let icon = this.refs.root.querySelector('.r-el-input__icon');
 
-      if (icon && !icon.classList.contains('el-icon-circle-close')) {
-        const elements = this.refs.root.querySelector('.el-input__icon');
+      if (icon && !icon.classList.contains('r-el-icon-circle-close')) {
+        const elements = this.refs.root.querySelector('.r-el-input__icon');
 
         for (let i = 0; i < elements.length; i++) {
           elements[i].classList.add('is-reverse');
@@ -428,7 +428,7 @@ class Select extends Component {
 
     if (!this.refs.root) return false;
 
-    let icon = this.refs.root.querySelector('.el-input__icon');
+    let icon = this.refs.root.querySelector('.r-el-input__icon');
 
     if (icon) {
       if (criteria) {
@@ -812,10 +812,10 @@ class Select extends Component {
     const { selected, inputWidth, inputLength, query, selectedLabel, visible, options, filteredOptionsCount, currentPlaceholder } = this.state;
 
     return (
-      <div ref="root" style={this.style()} className={this.className('el-select')}>
+      <div ref="root" style={this.style()} className={this.className('r-el-select')}>
         {
           multiple && (
-            <div ref="tags" className="el-select__tags" onClick={this.toggleMenu.bind(this)} style={{
+            <div ref="tags" className="r-el-select__tags" onClick={this.toggleMenu.bind(this)} style={{
               maxWidth: inputWidth - 32
             }}>
               {
@@ -829,7 +829,7 @@ class Select extends Component {
                       closeTransition={true}
                       onClose={this.deleteTag.bind(this, el)}
                     >
-                      <span className="el-select__tags-text">{el.currentLabel()}</span>
+                      <span className="r-el-select__tags-text">{el.currentLabel()}</span>
                     </Tag>
                   )
                 })
@@ -839,7 +839,7 @@ class Select extends Component {
                   <input
                     ref="input"
                     type="text"
-                    className={this.classNames('el-select__input', size && `is-${size}`)}
+                    className={this.classNames('r-el-select__input', size && `is-${size}`)}
                     style={{ width: inputLength, maxWidth: inputWidth - 42 }}
                     disabled={disabled}
                     defaultValue={query}
@@ -928,23 +928,23 @@ class Select extends Component {
             }
           }}
         />
-        <Transition name="el-zoom-in-top" onEnter={this.onEnter.bind(this)} onAfterLeave={this.onAfterLeave.bind(this)}>
+        <Transition name="r-el-zoom-in-top" onEnter={this.onEnter.bind(this)} onAfterLeave={this.onAfterLeave.bind(this)}>
           <View show={visible && this.emptyText() !== false}>
             <div
               ref="popper"
-              className={this.classNames('el-select-dropdown', { 'is-multiple': multiple })}
+              className={this.classNames('r-el-select-dropdown', { 'is-multiple': multiple })}
               style={{ minWidth: inputWidth }}
             >
               <View show={options.length > 0 && filteredOptionsCount > 0 && !loading}>
                 <Scrollbar
                   viewComponent="ul"
-                  wrapClass="el-select-dropdown__wrap"
-                  viewClass="el-select-dropdown__list"
+                  wrapClass="r-el-select-dropdown__wrap"
+                  viewClass="r-el-select-dropdown__list"
                 >
                   {this.props.children}
                 </Scrollbar>
               </View>
-              {this.emptyText() && <p className="el-select-dropdown__empty">{this.emptyText()}</p>}
+              {this.emptyText() && <p className="r-el-select-dropdown__empty">{this.emptyText()}</p>}
             </div>
           </View>
         </Transition>

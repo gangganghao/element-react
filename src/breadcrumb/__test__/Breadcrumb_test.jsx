@@ -11,7 +11,7 @@ describe('Breadcrumb test', () => {
         <Breadcrumb.Item>活动管理</Breadcrumb.Item>
       </Breadcrumb>
     );
-    expect(w.is('.el-breadcrumb')).toBe(true);
+    expect(w.is('.r-el-breadcrumb')).toBe(true);
   });
 
   it('test children', () => {
@@ -23,7 +23,7 @@ describe('Breadcrumb test', () => {
         <Breadcrumb.Item>活动详情</Breadcrumb.Item>
       </Breadcrumb>
     );
-    expect(w.find('.el-breadcrumb__item').length).toBe(4);
+    expect(w.find('.r-el-breadcrumb__item').length).toBe(4);
   });
 
   it('test separator', () => {
@@ -35,6 +35,6 @@ describe('Breadcrumb test', () => {
         <Breadcrumb.Item>活动详情</Breadcrumb.Item>
       </Breadcrumb>
     );
-    expect(w.find('.el-breadcrumb__separator').at(0).text()).toBe('/');
+    expect(w.find('.r-el-breadcrumb__separator').at(0).text()).toBe('/');
   });
 });

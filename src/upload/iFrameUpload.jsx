@@ -99,8 +99,8 @@ export default class IframeUpload extends Component {
     const { drag, action, name, accept, listType } = this.props;
     const { frameName } = this.state;
     const classes = this.classNames({
-      'el-upload': true,
-      [`el-upload--${listType}`]: true
+      'r-el-upload': true,
+      [`r-el-upload--${listType}`]: true
     });
     return (
       <div
@@ -119,7 +119,7 @@ export default class IframeUpload extends Component {
           method="POST"
         >
           <input
-            className="el-upload__input"
+            className="r-el-upload__input"
             type="file"
             ref="input"
             name={name}

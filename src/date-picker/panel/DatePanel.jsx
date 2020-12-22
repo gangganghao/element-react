@@ -362,23 +362,23 @@ export default class DatePanel extends PopperBase {
     return (
       <div
         ref="root"
-        className={this.classNames('el-picker-panel el-date-picker', {
+        className={this.classNames('r-el-picker-panel r-el-date-picker', {
           'has-sidebar': shortcuts,
           'has-time': isShowTime
         })}
       >
 
-        <div className="el-picker-panel__body-wrapper">
+        <div className="r-el-picker-panel__body-wrapper">
           {
             Array.isArray(shortcuts) && (
-              <div className="el-picker-panel__sidebar">
+              <div className="r-el-picker-panel__sidebar">
                 {
                   shortcuts.map((e, idx) => {
                     return (
                       <button
                         key={idx}
                         type="button"
-                        className="el-picker-panel__shortcut"
+                        className="r-el-picker-panel__shortcut"
                         onClick={() => this.handleShortcutClick(e)}>{e.text}</button>
                     )
                   })
@@ -386,11 +386,11 @@ export default class DatePanel extends PopperBase {
               </div>
             )
           }
-          <div className="el-picker-panel__body">
+          <div className="r-el-picker-panel__body">
             {
               isShowTime && (
-                <div className="el-date-picker__time-header">
-                  <span className="el-date-picker__editor-wrap">
+                <div className="r-el-date-picker__time-header">
+                  <span className="r-el-date-picker__editor-wrap">
                     <Input
                       placeholder={t('el.datepicker.selectDate')}
                       value={this.visibleDate}
@@ -398,7 +398,7 @@ export default class DatePanel extends PopperBase {
                       onChange={date=>this.visibleDate=date}
                       />
                   </span>
-                  <span className="el-date-picker__editor-wrap">
+                  <span className="r-el-date-picker__editor-wrap">
                     <Input
                       ref="input"
                       onFocus={()=> this.setState({timePickerVisible: !this.state.timePickerVisible})}
@@ -441,29 +441,29 @@ export default class DatePanel extends PopperBase {
 
             {
               currentView !== 'time' && (
-                <div className="el-date-picker__header">
+                <div className="r-el-date-picker__header">
                   <button
                     type="button"
                     onClick={this.prevYear.bind(this)}
-                    className="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-d-arrow-left">
+                    className="r-el-picker-panel__icon-btn r-el-date-picker__prev-btn r-el-icon-d-arrow-left">
                   </button>
                   {
                     currentView === PICKER_VIEWS.DATE && (
                       <button
                         type="button"
                         onClick={this.prevMonth.bind(this)}
-                        className="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-arrow-left">
+                        className="r-el-picker-panel__icon-btn r-el-date-picker__prev-btn r-el-icon-arrow-left">
                       </button>)
                   }
                   <span
                     onClick={this.showYearPicker.bind(this)}
-                    className="el-date-picker__header-label">{this.yearLabel()}</span>
+                    className="r-el-date-picker__header-label">{this.yearLabel()}</span>
                   {
                     currentView === PICKER_VIEWS.DATE && (
                       <span
                         onClick={this.showMonthPicker.bind(this)}
                         className={
-                          this.classNames('el-date-picker__header-label', {
+                          this.classNames('r-el-date-picker__header-label', {
                             active: currentView === 'month'
                           })
                         }
@@ -473,21 +473,21 @@ export default class DatePanel extends PopperBase {
                   <button
                     type="button"
                     onClick={this.nextYear.bind(this)}
-                    className="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-d-arrow-right">
+                    className="r-el-picker-panel__icon-btn r-el-date-picker__next-btn r-el-icon-d-arrow-right">
                   </button>
                   {
                     currentView === PICKER_VIEWS.DATE && (
                       <button
                         type="button"
                         onClick={this.nextMonth.bind(this)}
-                        className="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-arrow-right">
+                        className="r-el-picker-panel__icon-btn r-el-date-picker__next-btn r-el-icon-arrow-right">
                       </button>
                     )
                   }
                 </div>
               )
             }
-            <div className="el-picker-panel__content">
+            <div className="r-el-picker-panel__content">
               {this._pickerContent()}
             </div>
           </div>
@@ -496,14 +496,14 @@ export default class DatePanel extends PopperBase {
         {
           isShowTime && currentView === PICKER_VIEWS.DATE && (
             <div
-              className="el-picker-panel__footer">
+              className="r-el-picker-panel__footer">
               <a
                 href="JavaScript:"
-                className="el-picker-panel__link-btn"
+                className="r-el-picker-panel__link-btn"
                 onClick={this.changeToNow.bind(this)}>{t('el.datepicker.now')}</a>
               <button
                 type="button"
-                className="el-picker-panel__btn"
+                className="r-el-picker-panel__btn"
                 onClick={() => this.confirm()}>{t('el.datepicker.confirm')}</button>
             </div>
           )

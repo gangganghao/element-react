@@ -7,7 +7,7 @@ const _document = (document: any);
 let scrollBarWidth: ?number;
 
 export const cleanScrollBar = () => {
-  document.querySelectorAll('.el-table__body-wrapper').forEach(el => {
+  document.querySelectorAll('.r-el-table__body-wrapper').forEach(el => {
     setTimeout(() => {
       el.style.overflow = 'hidden';
       setTimeout(() => el.style.overflow = 'auto');

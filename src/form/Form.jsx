@@ -71,8 +71,8 @@ export default class Form extends Component {
 
   render(): React.DOM {
     return (
-      <form style={this.style()} className={this.className('el-form', this.props.labelPosition && `el-form--label-${this.props.labelPosition}`, {
-        'el-form--inline': this.props.inline
+      <form style={this.style()} className={this.className('r-el-form', this.props.labelPosition && `r-el-form--label-${this.props.labelPosition}`, {
+        'r-el-form--inline': this.props.inline
       })} onSubmit={this.props.onSubmit}>{this.props.children}</form>
     )
   }

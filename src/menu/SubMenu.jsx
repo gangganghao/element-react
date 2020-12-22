@@ -80,28 +80,28 @@ export default class SubMenu extends MixinComponent {
 
   render(): React.DOM {
     return (
-      <li style={this.style()} className={this.className('el-submenu', {
+      <li style={this.style()} className={this.className('r-el-submenu', {
         'is-active': this.state.active,
         'is-opened': this.opened()
       })}>
-        <div ref="submenu-title" className="el-submenu__title">
+        <div ref="submenu-title" className="r-el-submenu__title">
           {this.props.title}
-          <i className={this.classNames('el-submenu__icon-arrow', {
-              'el-icon-arrow-down': this.rootMenu().props.mode === 'vertical',
-              'el-icon-caret-bottom': this.rootMenu().props.mode === 'horizontal'
+          <i className={this.classNames('r-el-submenu__icon-arrow', {
+              'r-el-icon-arrow-down': this.rootMenu().props.mode === 'vertical',
+              'r-el-icon-caret-bottom': this.rootMenu().props.mode === 'horizontal'
             })}>
           </i>
         </div>
         {
           this.rootMenu().props.mode === 'horizontal' ? (
-            <Transition name="el-zoom-in-top">
+            <Transition name="r-el-zoom-in-top">
               <View show={this.opened()}>
-                <ul className="el-menu">{this.props.children}</ul>
+                <ul className="r-el-menu">{this.props.children}</ul>
               </View>
             </Transition>
           ) : (
             <CollapseTransition isShow={this.opened()}>
-              <ul className="el-menu">{this.props.children}</ul>
+              <ul className="r-el-menu">{this.props.children}</ul>
             </CollapseTransition>
           )
         }

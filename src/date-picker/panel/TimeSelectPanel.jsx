@@ -43,7 +43,7 @@ export default class TimeSelectPanel extends PopperBase {
   }
 
   scrollToOption(className: string = 'selected') {
-    const menu = this.refs.root.querySelector('.el-picker-panel__content');
+    const menu = this.refs.root.querySelector('.r-el-picker-panel__content');
     scrollIntoView(menu, menu.getElementsByClassName(className)[0]);
   }
 
@@ -64,8 +64,8 @@ export default class TimeSelectPanel extends PopperBase {
     return (
       <div
         ref="root"
-        className="el-picker-panel time-select">
-        <Scrollbar wrapClass="el-picker-panel__content" noresize={true}>
+        className="r-el-picker-panel time-select">
+        <Scrollbar wrapClass="r-el-picker-panel__content" noresize={true}>
           {
             this.items().map((item, idx) => {
               return (

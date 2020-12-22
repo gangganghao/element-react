@@ -39,7 +39,7 @@ export default class Cover extends Component {
     return (
       <div
         className={this.classNames({
-          'el-upload-dragger': true,
+          'r-el-upload-dragger': true,
           'is-dragover': dragOver
         })}
         onDrop={e => this.onDrop(e)}

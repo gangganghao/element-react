@@ -34,7 +34,7 @@ export default class MenuItem extends MixinComponent {
     return (
       <li
         style={this.style()}
-        className={this.className("el-menu-item", {
+        className={this.className("r-el-menu-item", {
           'is-active': this.active(),
           'is-disabled': this.props.disabled
         })}

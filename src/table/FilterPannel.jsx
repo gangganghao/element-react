@@ -9,7 +9,7 @@ import local from '../locale';
 
 function getPopupContainer() {
   const container = document.createElement('div');
-  container.className = 'el-table-poper';
+  container.className = 'r-el-table-poper';
   container.style.zIndex = 999;
   document.body.appendChild(container);
   return container;
@@ -88,15 +88,15 @@ export default class FilterPannel extends Component<FilterProps, FilterState> {
     let content;
     if (multiple) {
       content = [(
-        <div className="el-table-filter__content" key="content">
-          <Checkbox.Group value={filteredValue || []} onChange={this.handleFiltersChange.bind(this)} className="el-table-filter__checkbox-group">
+        <div className="r-el-table-filter__content" key="content">
+          <Checkbox.Group value={filteredValue || []} onChange={this.handleFiltersChange.bind(this)} className="r-el-table-filter__checkbox-group">
             {filters && filters.map(filter => (
               <Checkbox value={filter.value} label={filter.text} key={filter.value} />
             ))}
           </Checkbox.Group>
         </div>
       ), (
-        <div className="el-table-filter__bottom" key="bottom">
+        <div className="r-el-table-filter__bottom" key="bottom">
           <button
             className={this.classNames({ 'is-disabled': !filteredValue || !filteredValue.length })}
             disabled={!filteredValue || !filteredValue.length}
@@ -109,9 +109,9 @@ export default class FilterPannel extends Component<FilterProps, FilterState> {
       )]
     } else {
       content = (
-        <ul className="el-table-filter__list">
+        <ul className="r-el-table-filter__list">
           <li
-            className={this.classNames('el-table-filter__list-item', { 'is-active': !filteredValue })}
+            className={this.classNames('r-el-table-filter__list-item', { 'is-active': !filteredValue })}
             onClick={this.changeFilteredValue.bind(this, null)}
           >
             {local.t('el.table.clearFilter')}
@@ -119,7 +119,7 @@ export default class FilterPannel extends Component<FilterProps, FilterState> {
           {filters && filters.map(filter => (
             <li
               key={filter.value}
-              className={this.classNames('el-table-filter__list-item', { 'is-active': filter.value === filteredValue })}
+              className={this.classNames('r-el-table-filter__list-item', { 'is-active': filter.value === filteredValue })}
               onClick={this.changeFilteredValue.bind(this, filter.value)}
             >
               {filter.text}
@@ -131,13 +131,13 @@ export default class FilterPannel extends Component<FilterProps, FilterState> {
 
     return (
       <Transition
-        name="el-zoom-in-top"
+        name="r-el-zoom-in-top"
         onEnter={this.onEnter}
         onAfterLeave={this.onAfterLeave}
       >
         <View show={visible}>
           <div
-            className={'el-table-filter'}
+            className={'r-el-table-filter'}
             ref={(dom) => { this.poper = dom; }}
             onClick={(e) => { e.nativeEvent.stopImmediatePropagation() }}  // prevent document click event
           >

@@ -202,14 +202,14 @@ export default class FormItem extends Component {
     const { label, required } = this.props;
 
     return (
-      <div style={this.style()} className={this.className('el-form-item', {
+      <div style={this.style()} className={this.className('r-el-form-item', {
         'is-error': error !== '',
         'is-validating': validating,
         'is-required': this.isRequired() || required
       })} onBlur={this.onFieldBlur.bind(this)} onChange={this.onFieldChange.bind(this)}>
         {
           label && (
-            <label className="el-form-item__label" style={this.labelStyle()}>
+            <label className="r-el-form-item__label" style={this.labelStyle()}>
               {
                 typeof(label) === 'string'? 
                 label + this.parent().props.labelSuffix :
@@ -218,10 +218,10 @@ export default class FormItem extends Component {
             </label>
           )
         }
-        <div className="el-form-item__content" style={this.contentStyle()}>
+        <div className="r-el-form-item__content" style={this.contentStyle()}>
           {this.props.children}
-          <Transition name="el-zoom-in-top">
-            { error && <div className="el-form-item__error">{error}</div> }
+          <Transition name="r-el-zoom-in-top">
+            { error && <div className="r-el-form-item__error">{error}</div> }
           </Transition>
         </div>
       </div>

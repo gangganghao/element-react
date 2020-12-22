@@ -26,44 +26,44 @@ export default class Step extends Component {
     const directionClass = `is-${direction}`;
     const statusClass = `is-${status}`;
     const iconNode = icon
-      ? <i className={`el-icon-${icon}`} />
+      ? <i className={`r-el-icon-${icon}`} />
       : <div>{stepNumber}</div>;
 
     return (
       <div
         style={this.style(style)}
-        className={this.className('el-step', directionClass)}
+        className={this.className('r-el-step', directionClass)}
       >
         <div
-          className={this.classNames('el-step__head', statusClass, {
+          className={this.classNames('r-el-step__head', statusClass, {
             'is-text': !icon
           })}
         >
           <div
-            className={this.classNames('el-step__line', directionClass, {
+            className={this.classNames('r-el-step__line', directionClass, {
               'is-icon': icon
             })}
           >
-            <i className="el-step__line-inner" style={lineStyle} />
+            <i className="r-el-step__line-inner" style={lineStyle} />
           </div>
-          <span className="el-step__icon">
+          <span className="r-el-step__icon">
             {status !== 'success' && status !== 'error'
               ? iconNode
               : <i
                   className={
-                    'el-icon-' + (status === 'success' ? 'check' : 'close')
+                    'r-el-icon-' + (status === 'success' ? 'check' : 'close')
                   }
                 />}
           </span>
         </div>
-        <div className="el-step__main">
+        <div className="r-el-step__main">
           <div
             ref="title"
-            className={this.classNames('el-step__title', statusClass)}
+            className={this.classNames('r-el-step__title', statusClass)}
           >
             {title}
           </div>
-          <div className={this.classNames('el-step__description', statusClass)}>
+          <div className={this.classNames('r-el-step__description', statusClass)}>
             {description}
           </div>
         </div>

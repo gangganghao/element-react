@@ -143,8 +143,8 @@ export default class CascaderMenu extends Component {
 
         return (
           <li key={index} className={this.classNames({
-              'el-cascader-menu__item': true,
-              'el-cascader-menu__item--extensible': item.children,
+              'r-el-cascader-menu__item': true,
+              'r-el-cascader-menu__item--extensible': item.children,
               'is-active': item.value === activeValue[menuIndex],
               'is-disabled': item.disabled
             })}
@@ -163,8 +163,8 @@ export default class CascaderMenu extends Component {
 
       return (
         <ul key={menuIndex} className={this.classNames({
-          'el-cascader-menu': true,
-          'el-cascader-menu--flexible': isFlat
+          'r-el-cascader-menu': true,
+          'r-el-cascader-menu--flexible': isFlat
         })} style={menuStyle}>
           {items}
         </ul>
@@ -172,9 +172,9 @@ export default class CascaderMenu extends Component {
     });
 
     return (
-      <Transition name="el-zoom-in-top">
+      <Transition name="r-el-zoom-in-top">
         <View show={visible}>
-          <div className={this.classNames('el-cascader-menus', popperClass)}>
+          <div className={this.classNames('r-el-cascader-menus', popperClass)}>
             {menus}
           </div>
         </View>

@@ -65,7 +65,7 @@ describe('DatePicker tests', function () {
 
       w.find('input').simulate('focus');
 
-      let condition = Array.from(document.querySelectorAll('.el-date-table td.normal.disabled')).map(node => node.innerHTML).some(t=>t==1)
+      let condition = Array.from(document.querySelectorAll('.r-el-date-table td.normal.disabled')).map(node => node.innerHTML).some(t=>t==1)
       expect(condition).toBeTruthy()
     })
 
@@ -79,7 +79,7 @@ describe('DatePicker tests', function () {
     //   })
     //   w.find('input').simulate('focus');
     //   w.find('input').simulate('change', {target: {value: ''}})
-    //   document.querySelectorAll('.el-date-table td.available')[0].click()
+    //   document.querySelectorAll('.r-el-date-table td.available')[0].click()
     //   expect(onChange.called).toBeTruthy()
     //   expect(onChange.args[0][0] instanceof Date).toBeTruthy()
     // })
@@ -88,7 +88,7 @@ describe('DatePicker tests', function () {
       let w = shallowDefault({
         isShowTrigger: false
       })
-      expect(w.find('i.el-input__icon').exists()).toBe(false)
+      expect(w.find('i.r-el-input__icon').exists()).toBe(false)
     })
 
     it('format should work', () => {

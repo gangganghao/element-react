@@ -142,31 +142,31 @@ export default class InputNumber extends Component {
     const { value, inputActive } = this.state;
 
     return (
-      <div style={this.style()} className={this.className('el-input-number', size && `el-input-number--${size}`, {
+      <div style={this.style()} className={this.className('r-el-input-number', size && `r-el-input-number--${size}`, {
         'is-disabled': disabled,
         'is-without-controls': !controls
       })}>
         {
           controls && (
             <span
-              className={this.classNames("el-input-number__decrease", {
+              className={this.classNames("r-el-input-number__decrease", {
                 'is-disabled': this.minDisabled
               })}
               onClick={this.decrease.bind(this)}
             >
-              <i className="el-icon-minus"></i>
+              <i className="r-el-icon-minus"></i>
             </span>
           )
         }
         {
           controls && (
             <span
-              className={this.classNames("el-input-number__increase", {
+              className={this.classNames("r-el-input-number__increase", {
                 'is-disabled': this.maxDisabled
               })}
               onClick={this.increase.bind(this)}
             >
-              <i className="el-icon-plus"></i>
+              <i className="r-el-icon-plus"></i>
             </span>
           )
         }

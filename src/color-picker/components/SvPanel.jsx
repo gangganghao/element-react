@@ -83,14 +83,14 @@ export default class SvPanel extends Component {
     const { cursorTop, cursorLeft, background } = this.state;
     return (
       <div
-        className="el-color-svpanel"
+        className="r-el-color-svpanel"
         style={{ backgroundColor: background }}
         ref={el => this.$el = el}
       >
-        <div className="el-color-svpanel__white" />
-        <div className="el-color-svpanel__black" />
+        <div className="r-el-color-svpanel__white" />
+        <div className="r-el-color-svpanel__black" />
         <div
-          className="el-color-svpanel__cursor"
+          className="r-el-color-svpanel__cursor"
           style={{
             top: cursorTop + 'px',
             left: cursorLeft + 'px'

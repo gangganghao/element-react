@@ -69,7 +69,7 @@ describe('TimePicker test', function () {
     // https://github.com/Semantic-Org/Semantic-UI-React/issues/1319
     // w.find('.time-select-item').at(0).simulate('click', nativeEvent)
     // expect(onChange.args[0][0].getTime()).toBe(new Date(2017, 0, 1, 8, 30).getTime())
-    // w.find('i.el-input__icon').simulate('click', nativeEvent)
+    // w.find('i.r-el-input__icon').simulate('click', nativeEvent)
     // expect(onChange.calledWith(null)).toBeTruthy()
   })
 
@@ -80,7 +80,7 @@ describe('TimePicker test', function () {
         isShowTrigger={false}
       />
     )
-    expect(w.find('i.el-input__icon').exists()).toBe(false)
+    expect(w.find('i.r-el-input__icon').exists()).toBe(false)
   })
 
   it('isDisabled should work', ()=>{

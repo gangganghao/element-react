@@ -39,7 +39,7 @@ export default class MonthTable extends Component {
     const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 
     return (
-      <table onClick={this.handleMonthTableClick.bind(this)} className="el-month-table">
+      <table onClick={this.handleMonthTableClick.bind(this)} className="r-el-month-table">
         <tbody>
           {
             months.map((key, idx) => {

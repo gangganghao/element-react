@@ -116,12 +116,12 @@ export default class TableBody extends Component<TableBodyProps> {
     if (type === 'expand') {
       return (
         <div
-          className={this.classNames('el-table__expand-icon ', {
-            'el-table__expand-icon--expanded': this.context.tableStore.isRowExpanding(row, rowKey)
+          className={this.classNames('r-el-table__expand-icon ', {
+            'r-el-table__expand-icon--expanded': this.context.tableStore.isRowExpanding(row, rowKey)
           })}
           onClick={this.handleExpandClick.bind(this, row, rowKey)}
         >
-          <i className="el-icon el-icon-arrow-right" />
+          <i className="r-el-icon r-el-icon-arrow-right" />
         </div>
       )
     }
@@ -149,7 +149,7 @@ export default class TableBody extends Component<TableBodyProps> {
     const columnsHidden = tableStoreState.columns.map((column, index) => this.isColumnHidden(index));
     return (
       <table
-        className="el-table__body"
+        className="r-el-table__body"
         cellPadding={0}
         cellSpacing={0}
         style={this.style({
@@ -169,8 +169,8 @@ export default class TableBody extends Component<TableBodyProps> {
               <tr
                 key={rowKey}
                 style={this.getRowStyle(row, rowIndex)}
-                className={this.className('el-table__row', {
-                  'el-table__row--striped': props.stripe && rowIndex % 2 === 1,
+                className={this.className('r-el-table__row', {
+                  'r-el-table__row--striped': props.stripe && rowIndex % 2 === 1,
                   'hover-row': tableStoreState.hoverRow === rowIndex,
                   'current-row': props.highlightCurrentRow && (props.currentRowKey === rowKey || tableStoreState.currentRow === row)
                 }, typeof props.rowClassName === 'string'
@@ -204,7 +204,7 @@ export default class TableBody extends Component<TableBodyProps> {
               <tr key={`${rowKey}Expanded`}>
                 <td
                   colSpan={tableStoreState.columns.length}
-                  className="el-table__expanded-cell"
+                  className="r-el-table__expanded-cell"
                 >
                   {typeof props.renderExpanded === 'function' && props.renderExpanded(row, rowIndex)}
                 </td>

@@ -62,17 +62,17 @@ export default class Radio extends Component {
     const { disabled, value, children } = this.props;
 
     return (
-      <label style={this.style()} className={this.className('el-radio')}>
+      <label style={this.style()} className={this.className('r-el-radio')}>
         <span className={this.classNames({
-          'el-radio__input': true,
+          'r-el-radio__input': true,
           'is-checked': checked,
           'is-disabled': disabled,
           'is-focus': focus
         })}>
-          <span className="el-radio__inner"></span>
+          <span className="r-el-radio__inner"></span>
           <input
             type="radio"
-            className="el-radio__original"
+            className="r-el-radio__original"
             checked={checked}
             disabled={disabled}
             onChange={this.onChange.bind(this)}
@@ -80,7 +80,7 @@ export default class Radio extends Component {
             onBlur={this.onBlur.bind(this)}
           />
         </span>
-        <span className="el-radio__label">
+        <span className="r-el-radio__label">
           {children || value}
         </span>
       </label>

@@ -10,7 +10,7 @@ const Pre = props => {
   const disabled = props.internalCurrentPage <= 1 ? 'disabled' : '';
   return (
     <button type="button" className={`btn-prev ${disabled}`} onClick={props.prev}>
-      <i className="el-icon el-icon-arrow-left" />
+      <i className="r-el-icon r-el-icon-arrow-left" />
     </button>
   );
 };
@@ -23,7 +23,7 @@ const Next = props => {
 
   return (
     <button type="button" className={`btn-next ${disabled}`} onClick={props.next}>
-      <i className="el-icon el-icon-arrow-right" />
+      <i className="r-el-icon r-el-icon-arrow-right" />
     </button>
   );
 };
@@ -33,7 +33,7 @@ class Sizes extends Component {
     const { onSizeChange, internalPageSize } = this.props;
 
     return (
-      <span className="el-pagination__sizes">
+      <span className="r-el-pagination__sizes">
         <Select
           size="small"
           value={internalPageSize}
@@ -57,7 +57,7 @@ class Sizes extends Component {
 
 const Total = props => {
   return typeof props.total === 'number'
-    ? <span className="el-pagination__total">
+    ? <span className="r-el-pagination__total">
         {locale.t('el.pagination.total', { total: props.total })}
       </span>
     : <span />;
@@ -73,10 +73,10 @@ class Jumper extends Component {
 
   render() {
     return (
-      <span className="el-pagination__jump">
+      <span className="r-el-pagination__jump">
         {locale.t('el.pagination.goto')}
         <input
-          className="el-pagination__editor"
+          className="r-el-pagination__editor"
           type="number"
           min={1}
           max={this.props.internalPageCount}
@@ -303,9 +303,9 @@ export default class Pagination extends Component {
     const { internalCurrentPage, internalPageSize } = this.state;
 
     const className = this.classNames({
-      'el-pagination': true,
-      'el-pagination__rightwrapper': false,
-      'el-pagination--small': this.props.small
+      'r-el-pagination': true,
+      'r-el-pagination__rightwrapper': false,
+      'r-el-pagination--small': this.props.small
     });
 
     const children = [];

@@ -118,18 +118,18 @@ export default class AlphaSlider extends Component {
       <div
         ref={el => this.$el = el}
         className={this.classNames({
-          'el-color-alpha-slider': true,
+          'r-el-color-alpha-slider': true,
           'is-vertical': vertical
         })}
       >
         <div
-          className="el-color-alpha-slider__bar"
+          className="r-el-color-alpha-slider__bar"
           onClick={e => this.handleClick(e)}
           ref="bar"
           style={{ background: background }}
         />
         <div
-          className="el-color-alpha-slider__thumb"
+          className="r-el-color-alpha-slider__thumb"
           ref="thumb"
           style={{
             left: thumbLeft + 'px',

@@ -123,9 +123,9 @@ export default class CarouselItem extends Component {
     return (
       <View show={ready}>
         <div
-          className={this.className('el-carousel__item', {
+          className={this.className('r-el-carousel__item', {
             'is-active': active,
-            'el-carousel__item--card': this.parent().iscard,
+            'r-el-carousel__item--card': this.parent().iscard,
             'is-in-stage': inStage,
             'is-hover': hover,
             'is-animating': animating
@@ -139,7 +139,7 @@ export default class CarouselItem extends Component {
           {
             this.parent().iscard && (
               <View show={!active}>
-                <div className="el-carousel__mask" />
+                <div className="r-el-carousel__mask" />
               </View>
             )
           }

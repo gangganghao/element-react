@@ -94,11 +94,11 @@ export default class Canvas extends React.Component {
           {
             this.state.showBlock ? (
               <span>
-                <i className="el-icon-caret-top" />{this.props.locale.hide}
+                <i className="r-el-icon-caret-top" />{this.props.locale.hide}
               </span>
             ) : (
               <span>
-                <i className="el-icon-caret-bottom" />{this.props.locale.show}
+                <i className="r-el-icon-caret-bottom" />{this.props.locale.show}
               </span>
             )
           }

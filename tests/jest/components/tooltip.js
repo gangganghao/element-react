@@ -63,7 +63,7 @@ test('Theme', () => {
     </Tooltip>
   );
 
-  expect(tooltip1.find('div .el-tooltip__popper').at(0).hasClass('is-dark')).toEqual(true);
+  expect(tooltip1.find('div .r-el-tooltip__popper').at(0).hasClass('is-dark')).toEqual(true);
 
   const tooltip2 = mount(
     <div>
@@ -73,7 +73,7 @@ test('Theme', () => {
     </div>
   );
 
-  expect(tooltip2.find('div .el-tooltip__popper').at(0).hasClass('is-light')).toEqual(true);
+  expect(tooltip2.find('div .r-el-tooltip__popper').at(0).hasClass('is-light')).toEqual(true);
 
 });
 

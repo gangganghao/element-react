@@ -23,10 +23,10 @@ export default class Row extends Component {
 
   render(): React.DOM {
     return React.createElement(this.props.tag, {
-      className: this.className('el-row',
+      className: this.className('r-el-row',
         this.props.justify !== 'start' && `is-justify-${this.props.justify}`,
         this.props.align !== 'top' && `is-align-${this.props.align}`, {
-          'el-row--flex': this.props.type === 'flex'
+          'r-el-row--flex': this.props.type === 'flex'
         }
       ),
       style: this.style(this.getStyle())

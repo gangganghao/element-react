@@ -6,10 +6,10 @@ import { Component, PropTypes } from '../../libs';
 export default class OptionGroup extends Component {
   render() {
     return (
-      <ul style={this.style()} className={this.className('el-select-group__wrap')}>
-        <li className="el-select-group__title">{this.props.label}</li>
+      <ul style={this.style()} className={this.className('r-el-select-group__wrap')}>
+        <li className="r-el-select-group__title">{this.props.label}</li>
         <li>
-          <ul className="el-select-group">
+          <ul className="r-el-select-group">
             {this.props.children}
           </ul>
         </li>

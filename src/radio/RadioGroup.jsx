@@ -18,7 +18,7 @@ export default class RadioGroup extends Component {
 
   render() {
     return (
-      <div ref="RadioGroup" style={this.style()} className={this.className('el-radio-group')}>
+      <div ref="RadioGroup" style={this.style()} className={this.className('r-el-radio-group')}>
         {
           React.Children.map(this.props.children, element => {
             if (!element) {

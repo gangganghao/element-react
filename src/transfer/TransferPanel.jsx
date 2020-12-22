@@ -170,13 +170,13 @@ export default class TransferPanel extends Component {
     } = this.props;
     const { query } = this.state;
     return (
-      <div className="el-transfer-panel">
-        <p className="el-transfer-panel__header">{title}</p>
+      <div className="r-el-transfer-panel">
+        <p className="r-el-transfer-panel__header">{title}</p>
 
-        <div className="el-transfer-panel__body">
+        <div className="r-el-transfer-panel__body">
           {filterable &&
             <Input
-              className="el-transfer-panel__filter"
+              className="r-el-transfer-panel__filter"
               value={query}
               size="small"
               placeholder={placeholder}
@@ -192,13 +192,13 @@ export default class TransferPanel extends Component {
               v-show=""
               className={this.classNames({
                 'is-filterable': filterable,
-                'el-transfer-panel__list': true
+                'r-el-transfer-panel__list': true
               })}
               onChange={this.handleCheckedChange}
             >
               {this.filteredData.map((item, index) => (
                 <Checkbox
-                  className="el-transfer-panel__item"
+                  className="r-el-transfer-panel__item"
                   label={item[this.labelProp]}
                   disabled={item[this.disabledProp]}
                   value={item[this.keyProp]}
@@ -216,17 +216,17 @@ export default class TransferPanel extends Component {
           </View>
 
           <View show={this.hasNoMatch}>
-            <p className="el-transfer-panel__empty">
+            <p className="r-el-transfer-panel__empty">
               {i18n.t('el.transfer.noMatch')}
             </p>
           </View>
           <View show={data.length === 0 && !this.hasNoMatch}>
-            <p className="el-transfer-panel__empty">
+            <p className="r-el-transfer-panel__empty">
               {i18n.t('el.transfer.noData')}
             </p>
           </View>
         </div>
-        <p className="el-transfer-panel__footer">
+        <p className="r-el-transfer-panel__footer">
           <Checkbox
             checked={this.allChecked}
             onChange={this.handleAllCheckedChange}

@@ -9,14 +9,14 @@ describe('Button test', () => {
     const w = shallow(
       <Button type="primary">TEST</Button>
     );
-    expect(w.hasClass('el-button--primary')).toBeTruthy();
+    expect(w.hasClass('r-el-button--primary')).toBeTruthy();
     expect(w.childAt(0).text()).toBe('TEST');
   });
   it('icon', () => {
     const w = shallow(
       <Button icon="search">TEST</Button>
     );
-    expect(w.childAt(0).hasClass('el-icon-search')).toBeTruthy();
+    expect(w.childAt(0).hasClass('r-el-icon-search')).toBeTruthy();
   });
   it('nativeType', () => {
     const w = shallow(
@@ -29,7 +29,7 @@ describe('Button test', () => {
       <Button loading={true}>TEST</Button>
     );
     expect(w.hasClass('is-loading')).toBeTruthy();
-    expect(w.childAt(0).hasClass('el-icon-loading')).toBeTruthy();
+    expect(w.childAt(0).hasClass('r-el-icon-loading')).toBeTruthy();
   });
   it('disabled', () => {
     const w = shallow(
@@ -41,7 +41,7 @@ describe('Button test', () => {
     const w = shallow(
       <Button size="large">TEST</Button>
     );
-    expect(w.hasClass('el-button--large')).toBeTruthy();
+    expect(w.hasClass('r-el-button--large')).toBeTruthy();
   });
   it('plain', () => {
     const w = shallow(

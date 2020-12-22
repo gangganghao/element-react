@@ -151,9 +151,9 @@ export default class Menu extends Component {
     return (
       <ul
         style={this.style()}
-        className={this.className("el-menu", {
-          'el-menu--horizontal': this.props.mode === 'horizontal',
-          'el-menu--dark': this.props.theme === 'dark'
+        className={this.className("r-el-menu", {
+          'r-el-menu--horizontal': this.props.mode === 'horizontal',
+          'r-el-menu--dark': this.props.theme === 'dark'
         })}
       >
         {this.props.children}

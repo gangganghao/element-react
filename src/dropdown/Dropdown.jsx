@@ -97,15 +97,15 @@ class Dropdown extends Component {
     const { splitButton, type, size, menu } = this.props;
 
     return (
-      <div style={this.style()} className={this.className('el-dropdown')}>
+      <div style={this.style()} className={this.className('r-el-dropdown')}>
         {
           splitButton ?  (
             <Button.Group>
               <Button type={type} size={size} onClick={this.props.onClick.bind(this)}>
                 {this.props.children}
               </Button>
-              <Button ref="trigger" type={type} size={size} className="el-dropdown__caret-button">
-                <i className="el-dropdown__icon el-icon-caret-bottom"></i>
+              <Button ref="trigger" type={type} size={size} className="r-el-dropdown__caret-button">
+                <i className="r-el-dropdown__icon r-el-icon-caret-bottom"></i>
               </Button>
             </Button.Group>
           ) : React.cloneElement(this.props.children, { ref: 'default' })

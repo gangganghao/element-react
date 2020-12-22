@@ -53,9 +53,9 @@ export default class DropdownMenu extends Component {
 
   render(): React.DOM {
     return (
-      <Transition name="el-zoom-in-top" onEnter={this.onEnter.bind(this)} onAfterLeave={this.onAfterLeave.bind(this)}>
+      <Transition name="r-el-zoom-in-top" onEnter={this.onEnter.bind(this)} onAfterLeave={this.onAfterLeave.bind(this)}>
         <View show={this.state.showPopper}>
-          <ul ref="popper" style={this.style()} className={this.className('el-dropdown-menu')}>
+          <ul ref="popper" style={this.style()} className={this.className('r-el-dropdown-menu')}>
             {this.props.children}
           </ul>
         </View>

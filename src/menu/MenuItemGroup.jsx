@@ -46,8 +46,8 @@ export default class MenuItemGroup extends MixinComponent {
 
   render(): React.DOM {
     return (
-      <li style={this.style()} className={this.className('el-menu-item-group')}>
-        <div className="el-menu-item-group__title" style={{
+      <li style={this.style()} className={this.className('r-el-menu-item-group')}>
+        <div className="r-el-menu-item-group__title" style={{
             paddingLeft: this.state.paddingLeft
         }}>{this.props.title}</div>
         <ul>

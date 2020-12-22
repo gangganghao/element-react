@@ -30,19 +30,19 @@ export default class RadioButton extends Radio {
 
   render(): React.DOM {
     return (
-      <label style={this.style()} className={this.className('el-radio-button',
-        this.props.size && `el-radio-button--${this.size()}`, {
+      <label style={this.style()} className={this.className('r-el-radio-button',
+        this.props.size && `r-el-radio-button--${this.size()}`, {
           'is-active': this.state.checked
         })
       }>
         <input
           type="radio"
-          className="el-radio-button__orig-radio"
+          className="r-el-radio-button__orig-radio"
           checked={this.state.checked}
           disabled={this.isDisabled()}
           onChange={this.onChange.bind(this)}
         />
-        <span className="el-radio-button__inner" style={this.state.checked ? this.activeStyle() : {}}>
+        <span className="r-el-radio-button__inner" style={this.state.checked ? this.activeStyle() : {}}>
           {this.props.children || this.props.value}
         </span>
       </label>

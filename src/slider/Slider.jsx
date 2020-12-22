@@ -297,15 +297,15 @@ export default class Slider extends Component {
     const { inputValue, firstValue, secondValue } = this.state;
 
     return (
-      <div className={this.className('el-slider', {
+      <div className={this.className('r-el-slider', {
         'is-vertical': vertical,
-        'el-slider--with-input': showInput
+        'r-el-slider--with-input': showInput
       })}>
         {
           showInput && !range && (
             <InputNumber
               ref="input"
-              className="el-slider__input"
+              className="r-el-slider__input"
               defaultValue={inputValue}
               value={firstValue}
               step={step}
@@ -321,14 +321,14 @@ export default class Slider extends Component {
         <div
           ref={this.slider}
           style={this.runwayStyle()}
-          className={this.classNames('el-slider__runway', {
+          className={this.classNames('r-el-slider__runway', {
             'show-input': showInput,
             'disabled': disabled
           })}
           onClick={this.onSliderClick.bind(this)}
         >
           <div
-            className="el-slider__bar"
+            className="r-el-slider__bar"
             style={this.barStyle()}>
           </div>
           <SliderButton
@@ -349,7 +349,7 @@ export default class Slider extends Component {
             showStops && this.stops().map((item, index) => (
               <div
                 key={index}
-                className="el-slider__stop"
+                className="r-el-slider__stop"
                 style={vertical ? { 'bottom': item + '%' } : { 'left': item + '%' }}
               />
             ))

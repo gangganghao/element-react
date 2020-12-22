@@ -5,13 +5,13 @@ import Toast from './Toast';
 
 export default function Message(props = {}, type) {
   const div = document.createElement('div');
-  const messageBox = document.getElementsByClassName('el-message-content')[0];
+  const messageBox = document.getElementsByClassName('r-el-message-content')[0];
   if (messageBox) {
     messageBox.appendChild(div);
     document.body.appendChild(messageBox);
   } else {
     const messageBox = document.createElement('div');
-    messageBox.className = "el-message-content";
+    messageBox.className = "r-el-message-content";
     messageBox.appendChild(div);
     document.body.appendChild(messageBox);
   }
@@ -28,7 +28,7 @@ export default function Message(props = {}, type) {
 
   const component = React.createElement(Toast, Object.assign(props, {
     willUnmount: () => {
-      const messageBox = document.getElementsByClassName('el-message-content')[0];
+      const messageBox = document.getElementsByClassName('r-el-message-content')[0];
       ReactDOM.unmountComponentAtNode(div);
       messageBox.removeChild(div);
 

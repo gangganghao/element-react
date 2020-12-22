@@ -173,7 +173,7 @@ export default class SliderButton extends Component {
 
     return (
       <div
-        className={this.classNames('el-slider__button-wrapper', {
+        className={this.classNames('r-el-slider__button-wrapper', {
           'hover': hovering,
           'dragging': dragging
         })}
@@ -187,7 +187,7 @@ export default class SliderButton extends Component {
           disabled={!this.parent().props.showTooltip}
         >
           <div
-            className={this.classNames('el-slider__button', {
+            className={this.classNames('r-el-slider__button', {
               'hover': hovering,
               'dragging': dragging
             })}

@@ -97,8 +97,8 @@ export default class TimePanel extends PopperBase {
     return (
       <div
         ref="root"
-        className="el-time-panel">
-        <div className={this.classNames('el-time-panel__content', { 'has-seconds': isShowSeconds })}>
+        className="r-el-time-panel">
+        <div className={this.classNames('r-el-time-panel__content', { 'has-seconds': isShowSeconds })}>
           <TimeSpinner
             ref="spinner"
             onChange={this.handleChange.bind(this)}
@@ -110,14 +110,14 @@ export default class TimePanel extends PopperBase {
             onSelectRangeChange={onSelectRangeChange}
           />
         </div>
-        <div className="el-time-panel__footer">
+        <div className="r-el-time-panel__footer">
           <button
             type="button"
-            className="el-time-panel__btn cancel"
+            className="r-el-time-panel__btn cancel"
             onClick={() => this.props.onCancel()}>{$t('el.datepicker.cancel')}</button>
           <button
             type="button"
-            className="el-time-panel__btn confirm"
+            className="r-el-time-panel__btn confirm"
             onClick={() => this.handleConfirm()}>{$t('el.datepicker.confirm')}</button>
         </div>
       </div>

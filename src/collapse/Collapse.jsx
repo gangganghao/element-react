@@ -58,7 +58,7 @@ export default class Collapse extends Component {
       });
     });
     return (
-      <div className="el-collapse">
+      <div className="r-el-collapse">
         {content}
       </div>
     );

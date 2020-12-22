@@ -14,7 +14,7 @@ function NodeContent({context, renderContent}) {
   if (typeof renderContent === 'function') {
     return renderContent(nodeModel, nodeModel.data, treeNode.store);
   } else {
-    return <span className="el-tree-node__label">{nodeModel.label}</span>;
+    return <span className="r-el-tree-node__label">{nodeModel.label}</span>;
   }
 }
 
@@ -193,7 +193,7 @@ export default class Node extends Component {
     return (
       <div
         onClick={this.handleClick.bind(this)}
-        className={this.classNames('el-tree-node', {
+        className={this.classNames('r-el-tree-node', {
           expanded: childNodeRendered && expanded,
           'is-current': treeNode.getCurrentNode() === this,
           'is-hidden': !nodeModel.visible
@@ -201,11 +201,11 @@ export default class Node extends Component {
         style={{display: nodeModel.visible ? '': 'none'}}
       >
         <div
-          className="el-tree-node__content"
+          className="r-el-tree-node__content"
           style={{ paddingLeft: `${(nodeModel.level - 1) * treeNode.props.indent}px` }}
         >
           <span
-            className={this.classNames('el-tree-node__expand-icon', {
+            className={this.classNames('r-el-tree-node__expand-icon', {
               'is-leaf': nodeModel.isLeaf,
               expanded: !nodeModel.isLeaf && expanded
             })}
@@ -219,7 +219,7 @@ export default class Node extends Component {
               onClick={this.handleUserClick.bind(this)}
             />}
           {nodeModel.loading &&
-            <span className="el-tree-node__loading-icon el-icon-loading"> </span>}
+            <span className="r-el-tree-node__loading-icon r-el-icon-loading"> </span>}
           <NodeContent
             nodeModel={nodeModel}
             renderContent={treeNode.props.renderContent}
@@ -227,7 +227,7 @@ export default class Node extends Component {
           />
         </div>
         <CollapseTransition isShow={expanded} ref="collapse">
-          <div className="el-tree-node__children">
+          <div className="r-el-tree-node__children">
             {nodeModel.childNodes.map((e, idx) => {
               let props = Object.assign({}, this.props, { nodeModel: e, parent: this });
               return <Node {...props} key={this.getNodeKey(e, idx)} />;

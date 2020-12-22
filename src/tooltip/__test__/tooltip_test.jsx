@@ -9,12 +9,12 @@ test('Basic Usage', () => {
     </Tooltip>
   );
 
-  expect(tooltip.find('.el-tooltip__rel').exists()).toEqual(true);
-  expect(tooltip.find('.el-tooltip__rel').contains(<Button>top-start</Button>)).toEqual(true);
+  expect(tooltip.find('.r-el-tooltip__rel').exists()).toEqual(true);
+  expect(tooltip.find('.r-el-tooltip__rel').contains(<Button>top-start</Button>)).toEqual(true);
 
-  expect(tooltip.find('.el-tooltip__popper').exists()).toEqual(true);
-  expect(tooltip.find('.el-tooltip__popper').at(0).hasClass('is-dark')).toEqual(true);
-  expect(tooltip.find('.el-tooltip__popper').text()).toEqual('Top Left prompts info');
+  expect(tooltip.find('.r-el-tooltip__popper').exists()).toEqual(true);
+  expect(tooltip.find('.r-el-tooltip__popper').at(0).hasClass('is-dark')).toEqual(true);
+  expect(tooltip.find('.r-el-tooltip__popper').text()).toEqual('Top Left prompts info');
 });
 
 test('Theme', () => {
@@ -24,7 +24,7 @@ test('Theme', () => {
     </Tooltip>
   );
 
-  expect(tooltip1.find('div .el-tooltip__popper').at(0).hasClass('is-dark')).toEqual(true);
+  expect(tooltip1.find('div .r-el-tooltip__popper').at(0).hasClass('is-dark')).toEqual(true);
 
   const tooltip2 = mount(
     <div>
@@ -34,7 +34,7 @@ test('Theme', () => {
     </div>
   );
 
-  expect(tooltip2.find('div .el-tooltip__popper').at(0).hasClass('is-light')).toEqual(true);
+  expect(tooltip2.find('div .r-el-tooltip__popper').at(0).hasClass('is-light')).toEqual(true);
 
 });
 

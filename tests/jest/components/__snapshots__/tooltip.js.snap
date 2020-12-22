@@ -12,17 +12,17 @@ exports[`Basic Usage 1`] = `
     className="top"
   >
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -39,7 +39,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -56,17 +56,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -83,7 +83,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -100,17 +100,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -127,7 +127,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -148,17 +148,17 @@ exports[`Basic Usage 1`] = `
     className="left"
   >
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -175,7 +175,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -192,17 +192,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -219,7 +219,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -236,17 +236,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -263,7 +263,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -284,17 +284,17 @@ exports[`Basic Usage 1`] = `
     className="right"
   >
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -311,7 +311,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -328,17 +328,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -355,7 +355,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -372,17 +372,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -399,7 +399,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -420,17 +420,17 @@ exports[`Basic Usage 1`] = `
     className="bottom"
   >
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -447,7 +447,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -464,17 +464,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -491,7 +491,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",
@@ -508,17 +508,17 @@ exports[`Basic Usage 1`] = `
       </span>
     </div>
     <div
-      className="el-tooltip item"
+      className="r-el-tooltip item"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       style={Object {}}
     >
       <div
-        className="el-tooltip__rel"
+        className="r-el-tooltip__rel"
       >
         <div>
           <button
-            className="el-button el-button--default"
+            className="r-el-button r-el-button--default"
             disabled={false}
             onClick={[Function]}
             style={Object {}}
@@ -535,7 +535,7 @@ exports[`Basic Usage 1`] = `
         style={undefined}
       >
         <div
-          className="el-tooltip__popper is-dark"
+          className="r-el-tooltip__popper is-dark"
           style={
             Object {
               "display": "none",

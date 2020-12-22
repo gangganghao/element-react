@@ -16,14 +16,14 @@ export default class UploadList extends Component {
     return (
       <ul
         className={this.classNames({
-          'el-upload-list': true,
-          [`el-upload-list--${listType}`]: true
+          'r-el-upload-list': true,
+          [`r-el-upload-list--${listType}`]: true
         })}
       >
         {fileList.map(file => (
           <li
             className={this.classNames({
-              'el-upload-list__item': true,
+              'r-el-upload-list__item': true,
               [`is-${file.status}`]: true
             })}
             key={file.uid}
@@ -31,48 +31,48 @@ export default class UploadList extends Component {
             {['picture-card', 'picture'].includes(listType) &&
             isFinished(file.status) &&
             <img
-              className="el-upload-list__item-thumbnail"
+              className="r-el-upload-list__item-thumbnail"
               src={file.url}
               alt=""
             />}
 
             <a
-              className="el-upload-list__item-name"
+              className="r-el-upload-list__item-name"
               onClick={() => onPreview(file)}
             >
-              <i className="el-icon-document" />{file.name}
+              <i className="r-el-icon-document" />{file.name}
             </a>
             <label
-              className="el-upload-list__item-status-label"
+              className="r-el-upload-list__item-status-label"
             >
               <i
                 className={this.classNames({
-                  'el-icon-upload-success': true,
-                  'el-icon-circle-check': listType === 'text',
-                  'el-icon-check': ['picture-card', 'picture'].includes(
+                  'r-el-icon-upload-success': true,
+                  'r-el-icon-circle-check': listType === 'text',
+                  'r-el-icon-check': ['picture-card', 'picture'].includes(
                     listType
                   )
                 })}
               />
 
             </label>
-            <i className="el-icon-close" onClick={() => onRemove(file)} />
+            <i className="r-el-icon-close" onClick={() => onRemove(file)} />
             <View
-              className="el-upload-list__item-actions"
+              className="r-el-upload-list__item-actions"
               show={listType === 'picture-card' && isFinished(file.status)}
             >
                 <span>
                   <span
                     onClick={() => onPreview(file)}
-                    className="el-upload-list__item-preview"
+                    className="r-el-upload-list__item-preview"
                   >
-                    <i className="el-icon-view" />
+                    <i className="r-el-icon-view" />
                   </span>
                   <span
-                    className="el-upload-list__item-delete"
+                    className="r-el-upload-list__item-delete"
                     onClick={() => onRemove(file)}
                   >
-                    <i className="el-icon-delete2" />
+                    <i className="r-el-icon-delete2" />
                   </span>
                 </span>
             </View>

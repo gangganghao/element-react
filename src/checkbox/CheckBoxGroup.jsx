@@ -85,7 +85,7 @@ export default class CheckboxGroup extends Component {
     });
 
     return (
-      <div style={this.style()} className={this.className("el-checkbox-group")}>
+      <div style={this.style()} className={this.className("r-el-checkbox-group")}>
         {children}
       </div>
     );

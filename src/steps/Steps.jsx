@@ -52,7 +52,7 @@ export default class Steps extends Component {
     const { children, space, direction } = this.props;
 
     return (
-      <div style={this.style()} className={this.className('el-steps')}>
+      <div style={this.style()} className={this.className('r-el-steps')}>
         {React.Children.map(children, (child, index) => {
           const computedSpace = space
             ? `${space}px`

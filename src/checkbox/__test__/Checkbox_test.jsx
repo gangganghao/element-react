@@ -42,9 +42,9 @@ test('should render checked checkbox if checkboxGroup value contains the same la
     </Checkbox.Group>
   )
 
-  wrapper.find('.el-checkbox').forEach(e => {
-    if (checkList.includes(e.find('.el-checkbox__label').props().children)) {
-      expect(e.find('.el-checkbox__input').hasClass('is-checked')).toEqual(true)
+  wrapper.find('.r-el-checkbox').forEach(e => {
+    if (checkList.includes(e.find('.r-el-checkbox__label').props().children)) {
+      expect(e.find('.r-el-checkbox__input').hasClass('is-checked')).toEqual(true)
     }
   })
 
@@ -55,7 +55,7 @@ test('should display indeterminate mark when checkbox is an indeterminate state'
     <Checkbox
       indeterminate={true} />
   )
-  expect(wrapper.find('.el-checkbox__input').hasClass('is-indeterminate')).toEqual(true)
+  expect(wrapper.find('.r-el-checkbox__input').hasClass('is-indeterminate')).toEqual(true)
 })
 
 test('should limited to max and min value', () => {
@@ -77,7 +77,7 @@ test('should limited to max and min value', () => {
   )
 
   //test checked length
-  expect(wrapper.find('.el-checkbox .el-checkbox__input.is-checked').length).toBe(2)
+  expect(wrapper.find('.r-el-checkbox .r-el-checkbox__input.is-checked').length).toBe(2)
 
 
   const Input = document.createElement('input');
@@ -87,7 +87,7 @@ test('should limited to max and min value', () => {
   wrapper.find('input[type="checkbox"]').forEach(e => {
     if (!e.prop('checked')) {
       e.simulate('change', { target: Input });
-      expect(wrapper.find('.el-checkbox__input.is-checked').length).toBe(2)
+      expect(wrapper.find('.r-el-checkbox__input.is-checked').length).toBe(2)
     }
   })
 
@@ -96,7 +96,7 @@ test('should limited to max and min value', () => {
   wrapper.find('input[type="checkbox"]').forEach(e => {
     if (e.prop('checked')) {
       e.simulate('change', { target: Input })
-      expect(wrapper.find('.el-checkbox__input.is-checked').length).toBe(1)
+      expect(wrapper.find('.r-el-checkbox__input.is-checked').length).toBe(1)
     }
   })
 })

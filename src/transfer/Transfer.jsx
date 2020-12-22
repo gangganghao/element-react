@@ -151,7 +151,7 @@ export default class Transfer extends Component {
     const { leftChecked, rightChecked } = this.state;
 
     return (
-      <div className="el-transfer">
+      <div className="r-el-transfer">
         <TransferPanel
           propsAlias={propsAlias}
           data={this.sourceData}
@@ -168,14 +168,14 @@ export default class Transfer extends Component {
         >
           {leftFooter}
         </TransferPanel>
-        <div className="el-transfer__buttons">
+        <div className="r-el-transfer__buttons">
           <Button
             type="primary"
             size="small"
             onClick={this.addToLeft}
             disabled={rightChecked.length === 0}
           >
-            <i className="el-icon-arrow-left" />
+            <i className="r-el-icon-arrow-left" />
             {buttonTexts[0] !== undefined && <span>{buttonTexts[0]}</span>}
           </Button>
           <Button
@@ -185,7 +185,7 @@ export default class Transfer extends Component {
             disabled={leftChecked.length === 0}
           >
             {buttonTexts[1] !== undefined && <span>{buttonTexts[1]}</span>}
-            <i className="el-icon-arrow-right" />
+            <i className="r-el-icon-arrow-right" />
           </Button>
         </div>
         <TransferPanel

@@ -12,14 +12,14 @@ describe('Input test', () => {
       <Input placeholder="请输入内容" />
     );
     // to be tested: focus/placeholder/minlength/maxlength
-    expect(w.hasClass('el-input')).toBeTruthy();
+    expect(w.hasClass('r-el-input')).toBeTruthy();
   });
 
   it('disabled', () => {
     const w = shallow(
       <Input disabled />
     );
-    expect(w.find('.el-input input').prop('disabled')).toBe(true);
+    expect(w.find('.r-el-input input').prop('disabled')).toBe(true);
   });
 
   it('icon', () => {
@@ -31,9 +31,9 @@ describe('Input test', () => {
         onIconClick={cb}
       />
     );
-    expect(w.find('.el-icon-time').exists()).toBeTruthy();
+    expect(w.find('.r-el-icon-time').exists()).toBeTruthy();
 
-    w.find('.el-icon-time').simulate('click');
+    w.find('.r-el-icon-time').simulate('click');
     expect(cb.callCount).toBe(1);
   });
 
@@ -41,28 +41,28 @@ describe('Input test', () => {
     const w = shallow(
       <Input size="large" />
     );
-    expect(w.hasClass('el-input--large')).toBeTruthy();
+    expect(w.hasClass('r-el-input--large')).toBeTruthy();
   });
 
   it('type', () => {
     const w = shallow(
       <Input type="textarea" />
     );
-    expect(w.hasClass('el-textarea')).toBeTruthy();
+    expect(w.hasClass('r-el-textarea')).toBeTruthy();
   });
 
   it('rows', () => {
     const w = shallow(
       <Input type="textarea" rows={3} />
     );
-    expect(w.find('.el-textarea__inner').prop('rows')).toBe(3);
+    expect(w.find('.r-el-textarea__inner').prop('rows')).toBe(3);
   });
 
   it('resize', () => {
     const w = shallow(
       <Input type="textarea" resize="both" />
     );
-    expect(w.find('.el-textarea__inner').first().prop('style').resize).toBe('both');
+    expect(w.find('.r-el-textarea__inner').first().prop('style').resize).toBe('both');
   });
 
 });

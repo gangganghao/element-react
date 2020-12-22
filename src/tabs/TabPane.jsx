@@ -16,7 +16,7 @@ export default class TabPane extends Component {
 
   render(): React.DOM {
     return (
-      <div style={this.style()} className={this.className('el-tab-pane')}>
+      <div style={this.style()} className={this.className('r-el-tab-pane')}>
         { this.props.children }
       </div>
     );

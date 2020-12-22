@@ -225,7 +225,7 @@ class Cascader extends Component {
 
   highlightKeyword(label: string, keyword: string): any {
     return label.split(keyword).map((node, index) => index === 0 ? node : [
-      (<span className="el-cascader-menu__item__keyword">{keyword}</span>),
+      (<span className="r-el-cascader-menu__item__keyword">{keyword}</span>),
       node
     ]);
   }
@@ -311,7 +311,7 @@ class Cascader extends Component {
     const currentLabels = this.currentLabels();
 
     return (
-      <span ref="reference" className={this.className('el-cascader', size ? 'el-cascader--' + size : '', {
+      <span ref="reference" className={this.className('r-el-cascader', size ? 'r-el-cascader--' + size : '', {
         'is-opened': menuVisible,
         'is-disabled': disabled
       })}>
@@ -332,12 +332,12 @@ class Cascader extends Component {
             icon={
               clearable && inputHover && currentLabels.length ? (
                 <i
-                  className="el-input__icon el-icon-circle-close el-cascader__clearIcon"
+                  className="r-el-input__icon r-el-icon-circle-close r-el-cascader__clearIcon"
                   onClick={this.clearValue.bind(this)}
                 />
               ) : (
                 <i
-                    className={this.classNames('el-input__icon el-icon-caret-bottom', {
+                    className={this.classNames('r-el-input__icon r-el-icon-caret-bottom', {
                       'is-reverse': menuVisible
                     })}
                   />
@@ -345,7 +345,7 @@ class Cascader extends Component {
             }
           />
           <View show={currentLabels.length}>
-            <span className="el-cascader__label">
+            <span className="r-el-cascader__label">
               {
                 showAllLevels ? currentLabels.map((label, index) => {
                   return (

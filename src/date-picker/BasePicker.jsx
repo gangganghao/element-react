@@ -174,7 +174,7 @@ export default class BasePicker extends Component {
   }
 
   triggerClass(): string {
-    return this.type.includes('time') ? 'el-icon-time' : 'el-icon-date';
+    return this.type.includes('time') ? 'r-el-icon-time' : 'r-el-icon-date';
   }
 
   calcIsShowTrigger() {
@@ -271,10 +271,10 @@ export default class BasePicker extends Component {
 
     const createIconSlot = () => {
       if (this.calcIsShowTrigger()) {
-        const cls = isShowClose ? 'el-icon-close' : this.triggerClass()
+        const cls = isShowClose ? 'r-el-icon-close' : this.triggerClass()
         return (
           <i
-            className={this.classNames('el-input__icon', cls)}
+            className={this.classNames('r-el-input__icon', cls)}
             onClick={this.handleClickIcon.bind(this)}
             onMouseEnter={() => {
               if (isReadOnly || isDisabled) return
@@ -322,7 +322,7 @@ export default class BasePicker extends Component {
 
     return (
       <span
-        className={this.classNames('el-date-editor', className, {
+        className={this.classNames('r-el-date-editor', className, {
           'is-have-trigger': this.calcIsShowTrigger(),
           'is-active': pickerVisible,
           'is-filled': !!value
@@ -338,7 +338,7 @@ export default class BasePicker extends Component {
           func={this.handleClickOutside.bind(this)} />
 
         <Input
-          className={this.classNames(`el-date-editor el-date-editor--${this.type}`)}
+          className={this.classNames(`r-el-date-editor r-el-date-editor--${this.type}`)}
           readOnly={isReadOnly}
           disabled={isDisabled}
           type="text"

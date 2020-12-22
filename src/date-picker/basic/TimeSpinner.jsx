@@ -154,7 +154,7 @@ export default class TimeSpinner extends Component {
 
     return (
       <div
-        className={this.classNames('el-time-spinner', {
+        className={this.classNames('r-el-time-spinner', {
           'has-seconds': isShowSeconds
         })}
       >
@@ -164,9 +164,9 @@ export default class TimeSpinner extends Component {
             this.handleScroll('hours');
           }}
           ref="hours"
-          className="el-time-spinner__wrapper"
+          className="r-el-time-spinner__wrapper"
           wrapStyle={{ maxHeight: 'inherit' }}
-          viewClass="el-time-spinner__list"
+          viewClass="r-el-time-spinner__list"
           viewComponent="ul"
         >
           {hoursList.map((disabled, idx) => {
@@ -174,7 +174,7 @@ export default class TimeSpinner extends Component {
               <li
                 key={idx}
                 onClick={() => this.handleChange('hours', idx, disabled)}
-                className={this.classNames('el-time-spinner__item', {
+                className={this.classNames('r-el-time-spinner__item', {
                   active: idx === hours,
                   disabled: disabled
                 })}
@@ -188,9 +188,9 @@ export default class TimeSpinner extends Component {
           onMouseEnter={() => this.emitSelectRange('minutes')}
           onWheel={() => this.handleScroll('minutes')}
           ref="minutes"
-          className="el-time-spinner__wrapper"
+          className="r-el-time-spinner__wrapper"
           wrapStyle={{ maxHeight: 'inherit' }}
-          viewClass="el-time-spinner__list"
+          viewClass="r-el-time-spinner__list"
           viewComponent="ul"
         >
           {minutesLisit.map((minute) => {
@@ -198,7 +198,7 @@ export default class TimeSpinner extends Component {
               <li
                 key={minute}
                 onClick={() => this.handleChange('minutes', minute)}
-                className={this.classNames('el-time-spinner__item', {
+                className={this.classNames('r-el-time-spinner__item', {
                   active: minute === minutes
                 })}
               >
@@ -212,9 +212,9 @@ export default class TimeSpinner extends Component {
             onMouseEnter={() => this.emitSelectRange('seconds')}
             onWheel={() => this.handleScroll('seconds')}
             ref="seconds"
-            className="el-time-spinner__wrapper"
+            className="r-el-time-spinner__wrapper"
             wrapStyle={{ maxHeight: 'inherit' }}
-            viewClass="el-time-spinner__list"
+            viewClass="r-el-time-spinner__list"
             viewComponent="ul"
           >
             {secondsList.map((sec) => {
@@ -222,7 +222,7 @@ export default class TimeSpinner extends Component {
                 <li
                   key={sec}
                   onClick={() => this.handleChange('seconds', sec)}
-                  className={this.classNames('el-time-spinner__item', {
+                  className={this.classNames('r-el-time-spinner__item', {
                     active: sec === seconds
                   })}
                 >

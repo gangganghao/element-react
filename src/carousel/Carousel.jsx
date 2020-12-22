@@ -222,24 +222,24 @@ export default class Carousel extends Component {
     return (
       <div
         ref="root"
-        className={this.className('el-carousel', { 'el-carousel--card': this.iscard })}
+        className={this.className('r-el-carousel', { 'r-el-carousel--card': this.iscard })}
         onMouseEnter={this.handleMouseEnter.bind(this)}
         onMouseLeave={this.handleMouseLeave.bind(this)}
       >
         <div
-          className="el-carousel__container"
+          className="r-el-carousel__container"
           style={{height: height}}>
           <Transition name="carousel-arrow-left">
             {
               arrow !== 'never' && (
                 <View show={arrow === 'always' || hover}>
                   <button
-                    className="el-carousel__arrow el-carousel__arrow--left"
+                    className="r-el-carousel__arrow r-el-carousel__arrow--left"
                     onMouseEnter={this.handleButtonEnter.bind(this, 'left')}
                     onMouseLeave={this.handleButtonLeave.bind(this)}
                     onClick={this.throttledArrowClick.bind(this, activeIndex - 1)}
                   >
-                    <i className="el-icon-arrow-left"></i>
+                    <i className="r-el-icon-arrow-left"></i>
                   </button>
                 </View>
               )
@@ -250,12 +250,12 @@ export default class Carousel extends Component {
               arrow !== 'never' && (
                 <View show={arrow === 'always' || hover}>
                   <button
-                    className="el-carousel__arrow el-carousel__arrow--right"
+                    className="r-el-carousel__arrow r-el-carousel__arrow--right"
                     onMouseEnter={this.handleButtonEnter.bind(this, 'right')}
                     onMouseLeave={this.handleButtonLeave.bind(this)}
                     onClick={this.throttledArrowClick.bind(this, activeIndex + 1)}
                   >
-                    <i className="el-icon-arrow-right"></i>
+                    <i className="r-el-icon-arrow-right"></i>
                   </button>
                 </View>
               )
@@ -266,8 +266,8 @@ export default class Carousel extends Component {
         {
           indicatorPosition !== 'none' && (
             <ul
-              className={this.classNames('el-carousel__indicators', {
-                'el-carousel__indicators--outside': indicatorPosition === 'outside' || this.iscard
+              className={this.classNames('r-el-carousel__indicators', {
+                'r-el-carousel__indicators--outside': indicatorPosition === 'outside' || this.iscard
               })}
             >
               {
@@ -275,11 +275,11 @@ export default class Carousel extends Component {
                   return (
                     <li
                       key={index}
-                      className={this.classNames('el-carousel__indicator', { 'is-active': index === activeIndex })}
+                      className={this.classNames('r-el-carousel__indicator', { 'is-active': index === activeIndex })}
                       onMouseEnter={this.throttledIndicatorHover.bind(this, index)}
                       onClick={this.handleIndicatorClick.bind(this, index)}
                     >
-                      <button className="el-carousel__button"></button>
+                      <button className="r-el-carousel__button"></button>
                     </li>
                   )
                 })

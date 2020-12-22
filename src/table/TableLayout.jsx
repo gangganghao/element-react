@@ -199,7 +199,7 @@ export default class TableLayout extends Component<TableLayoutProps, TableLayout
       const { bodyWrapper } = this.table;
       const { fixedBodyHeight } = state;
 
-      const body = bodyWrapper.querySelector('.el-table__body');
+      const body = bodyWrapper.querySelector('.r-el-table__body');
       const scrollY = body.offsetHeight > fixedBodyHeight;
 
       return {

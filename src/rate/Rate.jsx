@@ -88,10 +88,10 @@ export default class Rate extends Component {
     if (allowHalf) {
       e.persist()
       let target = e.target;
-      if (this.hasClass(target, 'el-rate__item')) {
-        target = target.querySelector('.el-rate__icon');
+      if (this.hasClass(target, 'r-el-rate__item')) {
+        target = target.querySelector('.r-el-rate__icon');
       }
-      if (this.hasClass(target, 'el-rate__decimal')) {
+      if (this.hasClass(target, 'r-el-rate__decimal')) {
         target = target.parentNode;
       }
       this.setState({
@@ -259,10 +259,10 @@ export default class Rate extends Component {
     const { showText, textColor, disabled, max } = this.props;
     const { hoverIndex } = this.state;
     return (
-      <div style={this.style()} className={this.className('el-rate')}>
+      <div style={this.style()} className={this.className('r-el-rate')}>
         {[...Array(max)].map((v, k) => (
           <span
-            className="el-rate__item"
+            className="r-el-rate__item"
             style={{ cursor: disabled ? 'auto' : 'pointer' }}
             onClick={() => this.selectValue(k)}
             onMouseMove={(e) => this.setCurrentValue(e, k)}
@@ -273,14 +273,14 @@ export default class Rate extends Component {
               style={this.getIconStyle(k)}
               className={
                 hoverIndex === k
-                  ? `hover el-rate__icon ${this.classes()[k]}`
-                  : `el-rate__icon ${this.classes()[k]}`
+                  ? `hover r-el-rate__icon ${this.classes()[k]}`
+                  : `r-el-rate__icon ${this.classes()[k]}`
               }
             >
               {this.showDecimalIcon(k)
                 ? <i
                     style={this.decimalStyle()}
-                    className={`el-rate__decimal ${this.decimalIconClass()}`}
+                    className={`r-el-rate__decimal ${this.decimalIconClass()}`}
                   />
                 : null}
 
@@ -288,7 +288,7 @@ export default class Rate extends Component {
           </span>
         ))}
         {showText
-          ? <span className="el-rate__text" style={{ color: textColor }}>
+          ? <span className="r-el-rate__text" style={{ color: textColor }}>
               {this.showText()}
             </span>
           : null}
@@ -330,9 +330,9 @@ Rate.defaultProps = {
   max: 5,
   voidColor: '#C6D1DE',
   disabledVoidColor: '#EFF2F7',
-  iconClasses: ['el-icon-star-on', 'el-icon-star-on', 'el-icon-star-on'],
-  voidIconClass: 'el-icon-star-off',
-  disabledVoidIconClass: 'el-icon-star-on',
+  iconClasses: ['r-el-icon-star-on', 'r-el-icon-star-on', 'r-el-icon-star-on'],
+  voidIconClass: 'r-el-icon-star-off',
+  disabledVoidIconClass: 'r-el-icon-star-on',
   allowHalf: false,
   textTemplate: '{value}'
 };

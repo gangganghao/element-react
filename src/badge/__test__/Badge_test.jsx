@@ -12,8 +12,8 @@ describe('Badge Test', () => {
         <Button size="small">TEST</Button>
       </Badge>
     );
-    expect(w.find('.el-badge .el-button span').text()).toBe('TEST');
-    expect(w.find('.el-badge sup.el-badge__content').text()).toBe('12');
+    expect(w.find('.r-el-badge .r-el-button span').text()).toBe('TEST');
+    expect(w.find('.r-el-badge sup.r-el-badge__content').text()).toBe('12');
   });
 
   it('with Dropdown', () => {
@@ -29,15 +29,15 @@ describe('Badge Test', () => {
         </Dropdown.Menu>
         )}
       >
-        <span className="el-dropdown-link">
-          点我查看<i className="el-icon-caret-bottom el-icon--right"></i>
+        <span className="r-el-dropdown-link">
+          点我查看<i className="r-el-icon-caret-bottom r-el-icon--right"></i>
         </span>
       </Dropdown>
     );
-    expect(w.find('.el-dropdown-menu').childAt(0).find('div.el-badge').hasClass('mark')).toBeTruthy();
-    expect(w.find('.el-dropdown-menu').childAt(1).find('div.el-badge').hasClass('mark')).toBeTruthy();
-    expect(w.find('.el-dropdown-menu').childAt(0).find('sup.el-badge__content').text()).toBe('12');
-    expect(w.find('.el-dropdown-menu').childAt(1).find('sup.el-badge__content').text()).toBe('3');
+    expect(w.find('.r-el-dropdown-menu').childAt(0).find('div.r-el-badge').hasClass('mark')).toBeTruthy();
+    expect(w.find('.r-el-dropdown-menu').childAt(1).find('div.r-el-badge').hasClass('mark')).toBeTruthy();
+    expect(w.find('.r-el-dropdown-menu').childAt(0).find('sup.r-el-badge__content').text()).toBe('12');
+    expect(w.find('.r-el-dropdown-menu').childAt(1).find('sup.r-el-badge__content').text()).toBe('3');
   });
 
   it('Max value', () => {
@@ -56,9 +56,9 @@ describe('Badge Test', () => {
         <Button size="small">TEST</Button>
       </Badge>
     );
-    expect(w1.find('.el-badge sup.el-badge__content').text()).toBe('99+');
-    expect(w2.find('.el-badge sup.el-badge__content').text()).toBe('99');
-    expect(w3.find('.el-badge sup.el-badge__content').text()).toBe('1');
+    expect(w1.find('.r-el-badge sup.r-el-badge__content').text()).toBe('99+');
+    expect(w2.find('.r-el-badge sup.r-el-badge__content').text()).toBe('99');
+    expect(w3.find('.r-el-badge sup.r-el-badge__content').text()).toBe('1');
   });
 
   it('Custom content', () => {
@@ -72,8 +72,8 @@ describe('Badge Test', () => {
         <Button size="small">TEST</Button>
       </Badge>
     );
-    expect(w1.find('.el-badge sup.el-badge__content').text()).toBe('new');
-    expect(w2.find('.el-badge sup.el-badge__content').text()).toBe('hot');
+    expect(w1.find('.r-el-badge sup.r-el-badge__content').text()).toBe('new');
+    expect(w2.find('.r-el-badge sup.r-el-badge__content').text()).toBe('hot');
   });
 
   it('Dot', () => {
@@ -82,6 +82,6 @@ describe('Badge Test', () => {
         <Button className="share-button" icon="share" type="primary"></Button>
       </Badge>
     );
-    expect(w1.find('.el-badge sup.el-badge__content').hasClass('is-dot')).toBeTruthy();
+    expect(w1.find('.r-el-badge sup.r-el-badge__content').hasClass('is-dot')).toBeTruthy();
   });
 });

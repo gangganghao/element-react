@@ -116,8 +116,8 @@ export default class AjaxUpload extends Component {
     return (
       <div
         className={this.classNames({
-          'el-upload': true,
-          [`el-upload--${listType}`]: true
+          'r-el-upload': true,
+          [`r-el-upload--${listType}`]: true
         })}
         onClick={() => this.handleClick()}
       >
@@ -127,7 +127,7 @@ export default class AjaxUpload extends Component {
             </Cover>
           : this.props.children}
         <input
-          className="el-upload__input"
+          className="r-el-upload__input"
           type="file"
           ref="input"
           onChange={e => this.handleChange(e)}
